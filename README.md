@@ -212,11 +212,11 @@ The project follows a lifecycle-based approach similar to those used in healthca
 
 ---
 
-# License
+## License
 
-This project is released under the MIT License.
+This project is licensed under the MIT License.
 
-See the LICENSE file for details.
+See the [LICENSE](LICENSE) file for complete details.
 
 ---
 
