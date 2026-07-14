@@ -73,9 +73,9 @@ The Daily Engineering Brief establishes the objectives for the current engineeri
 | **Current Workstream** | Network Infrastructure |
 | **Current Phase** | Phase 2 – Network Infrastructure |
 | **Current Sprint** | Sprint 2 |
-| **Today's Objective** | Install and configure the GL.iNet Flint 2 |
-| **Primary Deliverable** | Network Foundation |
-| **Definition of Done** | Flint 2 installed, documented, and connectivity verified. |
+| **Today's Objective** | Develop the Project Orion Network Design Package |
+| **Primary Deliverable** | NET-000 through NET-008 |
+| **Definition of Done** | Network design documents reviewed and approved before Flint 2 configuration. |
 
 ---
 
