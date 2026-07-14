@@ -20,11 +20,11 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | **Current Sprint** | Sprint 2 |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
-| **Document Version** | 1.0 |
+| **Document Version** | 1.1 |
 | **Status** | Baselined |
 | **Classification** | Internal |
 | **Created** | 2026-06-29 |
-| **Last Updated** | 2026-06-29 |
+| **Last Updated** | 2026-07-14 |
 
 ---
 
@@ -33,6 +33,7 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | Version | Date       | Author        | Reviewer                  | Description                                          |
 | ------- | ---------- | ------------- | ------------------------- | ---------------------------------------------------- |
 | **1.0** | 2026-07-10 | George Jordan | Project Technical Advisor | Baselined as part of Governance Package Version 1.0. |
+| **1.1** | 2026-07-14 | George Jordan | Project Technical Advisor | Updated PM-001 following AGR-001 approval; advanced Current Work Plan to NET-002; refreshed Project Progress, Major Milestones, Quick Links, and Architecture Gate. |
 
 ---
 
@@ -60,7 +61,7 @@ The Project Health Dashboard provides an executive-level view of the overall hea
 | Documentation | 🟢 | Documentation is current and synchronized with implementation. |
 | Risks | 🟢 | No critical risks requiring immediate action. |
 | Overall Project Health |   🟢   | Project remains on track. |
-| **Last Reviewed:** 2026-06-30 |
+| **Last Reviewed:** 2026-07-14 |
 
 ---
 
@@ -73,9 +74,16 @@ The Daily Engineering Brief establishes the objectives for the current engineeri
 | **Current Workstream** | Network Infrastructure |
 | **Current Phase** | Phase 2 – Network Infrastructure |
 | **Current Sprint** | Sprint 2 |
-| **Today's Objective** | Develop the Project Orion Network Design Package |
-| **Primary Deliverable** | NET-000 through NET-008 |
-| **Definition of Done** | Network design documents reviewed and approved before Flint 2 configuration. |
+| **Today's Objective** | Develop NET-002 – Physical Network Topology |
+| **Primary Deliverable** | NET-002 Physical Network Topology (Version 0.1) |
+
+### Definition of Done
+
+- [ ] Physical network layout documented.
+- [ ] Device locations identified.
+- [ ] Connectivity between all infrastructure components defined.
+- [ ] Physical topology diagram completed.
+- [ ] Ready for Technical Design Review.
 
 ---
 
@@ -87,16 +95,52 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 
 ## Project Progress
 
-> *Content to be developed.*
+| Category | Status |
+|----------|--------|
+| **Current Sprint** | Sprint 2 |
+| **Sprint Status** | 🟢 Active |
+| **Completed Deliverables** | ✅ NET-000<br>✅ NET-001 |
+| **Current Deliverable** | ⏳ NET-002 – Physical Network Topology |
+| **Architecture Gate** | ✅ AGR-001 Passed |
+| **Next Milestone** | NET-002 Technical Design |
 
 ---
 
 ## Major Milestones
 
-> *Content to be developed.*
+| Milestone | Status |
+|-----------|--------|
+| Governance Package | ✅ Complete |
+| Sprint 1 | ✅ Complete |
+| NET-000 | ✅ Complete |
+| NET-001 | ✅ Complete |
+| AGR-001 | ✅ Passed |
+| NET-002 | ⏳ In Progress |
 
 ---
 
 ## Quick Links
 
-> *Content to be developed.*
+- PM-003 Sprint Status Tracker
+- PM-005 Decision Log
+- PM-006 Engineering Session Log
+- NET-000 Design Package Index
+- NET-001 Network Architecture
+- NET-002 — Physical Network Topology (Current)
+
+---
+
+## Architecture Gate
+
+| Item | Status |
+|------|--------|
+| **Gate ID** | AGR-001 |
+| **Result** | ✅ PASS |
+| **Approved Document** | NET-001 Network Architecture |
+| **Authorization** | Proceed to NET-002 |
+| **Approved By** | Technical Design Authority |
+| **Approval Date** | 2026-07-14 |
+
+---
+
+
