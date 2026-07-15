@@ -14,11 +14,11 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Project Baseline | Baseline 1.0 |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
-| Version | 1.1 |
+| Version | 1.2 |
 | Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-08 |
-| Last Updated | 2026-07-14 |
+| Last Updated | 2026-07-15 |
 
 ## Revision History
 
@@ -26,6 +26,7 @@ The Engineering Session Log provides a chronological record of engineering activ
 | ------- | ---------- | ------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | 1.0     | 2026-07-10 | George Jordan | Project Technical Advisor | Baselined as part of Governance Package Version 1.0.                                                                |
 | 1.1     | 2026-07-14 | George Jordan | Project Technical Advisor | Added Engineering Session 003 documenting the Technical Design Review and Architecture Gate Review 001 for NET-001. |
+| **1.2** | 2026-07-15 | George Jordan | Project Technical Advisor | Added Engineering Sessions 004 and 005 documenting NET-002 Physical Network Topology and NET-003 Logical Network Topology engineering activities. |
 
 ---
 
@@ -350,16 +351,108 @@ Sprint 2 Progress
 | Git | 🟢 Current |
 | Documentation | 🟢 Current |
 
-# Engineering Journal Status
+---
+
+## Engineering Session 005
+
+| Field | Value |
+|-------|-------|
+| Sprint | Sprint 2 |
+| Phase | Network Infrastructure |
+| Date | 2026-07-15 |
+| Duration | Approximately 10 hours (multiple engineering reviews) |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
+
+### Objective
+
+Develop and validate the logical network topology for Project Orion, defining network segmentation, trust boundaries, traffic flows, logical connectivity, security zones, and future network segmentation strategies to support secure and scalable infrastructure deployment.
+
+### Work Completed
+
+- ✓ Created NET-003 Logical Network Topology.
+- ✓ Defined logical network overview.
+- ✓ Established logical design objectives.
+- ✓ Documented network segments.
+- ✓ Defined trust boundaries.
+- ✓ Documented logical traffic flows.
+- ✓ Created logical connectivity matrix.
+- ✓ Defined security zones.
+- ✓ Developed future segmentation strategy.
+- ✓ Created high-level logical topology.
+- ✓ Completed Technical Design Authority review.
+
+### Review Outcome
+
+| Item | Status |
+|------|--------|
+| Design Review | PASS ✅ |
+| Logical Design | Approved |
+| Security Architecture | Approved |
+| Document Status | Baselined Version 0.1 |
+
+### Decisions Made
+
+| Decision ID | Decision |
+|-------------|----------|
+| ADR-007 | NET-003 approved as the authoritative logical network design document. |
+| ADR-008 | Logical segmentation strategy approved. |
+| ADR-009 | Proceed to NET-004 – IP Addressing Plan. |
+
+### Deliverables Updated
+
+| Deliverable | Action |
+|-------------|--------|
+| NET-003 – Logical Network Topology | Created |
+| PM-006 – Engineering Session Log | Updated |
+
+### Risks
+
+No significant logical architecture risks were identified.
+
+Future implementation risks will be addressed during network deployment and validation.
+
+### Lessons Learned
+
+| Lesson | Engineering Value |
+|---------|-------------------|
+| Logical design should be completed before IP allocation and implementation. | Reduces configuration errors and simplifies future security management. |
+| Defining trust boundaries early strengthens network security planning. | Supports defense-in-depth and Zero Trust principles. |
+
+### Next Session
+
+| Priority | Activity | Status |
+|----------|----------|--------|
+| 1 | Begin NET-004 – IP Addressing Plan | Planned |
+| 2 | Define IP allocation strategy | Planned |
+| 3 | Document DHCP scopes and reserved ranges | Planned |
+| 4 | Prepare addressing standards | Planned |
+
+### Sprint Progress
+
+Sprint 2 Progress
+
+███████████░░░░░░░ 60%
+
+### Repository Status
+
+| Component | Status |
+|-----------|--------|
+| Repository | 🟢 Healthy |
+| Git | 🟢 Current |
+| Documentation | 🟢 Current |
+
+---
+
+## Engineering Journal Status
 
 | Item | Current Status |
 |------|----------------|
 | Current Sprint | Sprint 2 |
 | Current Phase | Network Infrastructure |
-| Latest Engineering Session | Engineering Session 004 |
+| Latest Engineering Session | Engineering Session 005 |
 | Latest Architecture Gate | AGR-001 (PASS) |
-| Current Focus | NET-003 – Logical Network Topology |
+| Current Focus | NET-004 – IP Addressing Plan |
 | Repository Status | Healthy |
 
 ---
-
