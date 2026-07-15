@@ -31,34 +31,150 @@ The Engineering Session Log provides a chronological record of engineering activ
 
 ## Engineering Session 001
 
+| Field | Value |
+|-------|-------|
+| Sprint | Sprint 1 |
+| Phase | Governance Foundation |
+| Date | 2026-07-08 |
+| Duration | 2h 15m |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
+
+### Objective
+
+Advance STD-001 from initial draft toward a baseline-ready controlled document by implementing the mandatory governance sections required for all controlled documents.
+
+### Work Completed
+
+Completed Activities
+
+✓ 1. Established controlled document architecture.
+
+✓ 2. Added Document Mission.
+
+✓ 3. Added Document Control.
+
+✓ 4. Added Revision History.
+
+### Deliverables Updated
+
+| Deliverable | Action |
+|-------------|--------|
+| STD-001 – Document Control Standard | Updated |
+
+### Decisions Made
+
+No formal governance decisions were approved during this engineering session.
+
+Architectural recommendations remain under review until documented in PM-005 Decision Log.
+
+### Risks
+
+No active risks identified.
+
+### Lessons Learned
+
+| Lesson | Engineering Value |
+|---------|-------------------|
+| Standards should comply with their own governance requirements. | Improves governance integrity. |
+| Establish governance before implementation. | Reduces document rework. |
+
+### Next Session
+
+| Priority | Activity | Status |
+|----------|----------|--------|
+| 1 | Complete architecture review of STD-001 | Planned |
+| 2 | Baseline STD-001 Version 1.0 | Planned |
+| 3 | Update PM-001 to comply with STD-001 | Planned |
+
+### Sprint Progress
+
+████████░░ 80%
+
+- Review STD-001 ✅
+- Review PM-003 ✅
+
+### Repository Status
+
+| Component     |       Status      |
+| ------------- | :---------------: |
+| Repository    |     🟢 Healthy    |
+| Git           | 🟡 Pending Commit |
+| Documentation |     🟢 Current    |
 
 ---
 
 ## Engineering Session 002
 
+| Field | Value |
+|-------|-------|
+| Sprint | Sprint 1 |
+| Phase | Governance Baseline Review |
+| Date | 2026-07-10 |
+| Duration | 1.5 Hours |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
 
+### Governance Baseline Meeting 001
+
+| Item | Outcome |
+|------|---------|
+| Governance Package | Version 1.0 Approved |
+| Sprint Status | Sprint 1 Closed |
+| Next Sprint | Sprint 2 Authorized |
+| Governance Findings | None Outstanding |
+| Overall Result | PASS ✅ |
+
+### Documents Reviewed
+
+| Document | Version | Review Status |
+|----------|---------|---------------|
+| STD-001 | 1.0 | Reviewed |
+| PM-003 | Current | Reviewed |
+
+### Outcome
+
+| Document | Decision |
+|----------|----------|
+| STD-001 | Approved ✅ |
+| PM-003 | Approved ✅ |
+
+### Findings
+
+| Category | Result |
+|----------|--------|
+| Major Findings | None |
+| Minor Findings | None |
+| Risks Identified | None |
+| Overall Assessment | PASS ✅ |
+
+### Recommendations
+
+| Priority | Recommendation | Status |
+|----------|----------------|--------|
+| High | Proceed with PM-001 Governance Review | Approved |
+
+### Engineering Journal Status
+| Item                       | Current Status                 |
+| -------------------------- | ------------------------------ |
+| Current Sprint             | Sprint 2                       |
+| Current Phase              | Network Infrastructure         |
+| Latest Engineering Session | Engineering Session 002        |
+| Latest Architecture Gate   | N/A                            |
+| Current Focus              | NET-001 – Network Architecture |
 
 ---
 
 ## Engineering Session 003
 
-Sprint:
-Sprint 2
-
-Phase:
-Network Infrastructure
-
-Date:
-2026-07-14
-
-Duration:
-Approximately 3 hours
-
-Lead Engineer:
-George Jordan
-
-Senior Infrastructure Architect:
-Project Technical Advisor
+| Field | Value |
+|-------|-------|
+| Sprint | Sprint 2 |
+| Phase | Network Infrastructure |
+| Date | 2026-07-14 |
+| Duration | Approximately 3 hours |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
 
 ### Objective
 
@@ -86,30 +202,27 @@ The Technical Design Authority reviewed NET-001 Version 0.1 against Project Orio
 
 ### Review Outcome
 
-Architecture Gate Review 001
-
-Result:
-PASS
-
-Authorization:
-Proceed to NET-002 Physical Network Topology.
-
-Document Status:
-Approved for Detailed Design
+| Item | Status |
+|------|--------|
+| Architecture Gate | AGR-001 |
+| Result | PASS ✅ |
+| Authorization | Proceed to NET-002 – Physical Network Topology |
+| Document Status | Approved for Detailed Design |
 
 ### Decisions Made
 
 | Decision ID | Decision                                          |
 | ----------- | ------------------------------------------------- |
 | ADR-001     | NET-001 approved for detailed engineering design. |
-| ADR-002     | Architecture Gate AGR-001 passed; document approved for detailed engineering design. |
+| ADR-002     | AGR-001 passed; NET-001 approved for detailed engineering design. |
 | ADR-003     | NET-002 authorized to begin.                      |
-
 
 ### Deliverables Updated
 
-- NET-001 – Network Architecture
-- PM-006 – Engineering Session Log
+| Deliverable | Action |
+|-------------|--------|
+| NET-001 – Network Architecture | Updated |
+| PM-006 – Engineering Session Log | Updated |
 
 ### Risks
 
@@ -119,19 +232,18 @@ Detailed engineering review will continue during NET-002 development.
 
 ### Lessons Learned
 
-Conducting a formal architecture review before implementation significantly improves design quality and establishes engineering confidence prior to configuration activities.
+| Lesson | Engineering Value |
+|---------|-------------------|
+| Conduct architecture reviews before implementation. | Reduces redesign and improves quality. |
 
 ### Next Session
 
-Begin NET-002 — Physical Network Topology.
-
-Develop the physical network layout.
-
-Document device placement.
-
-Define physical connectivity.
-
-Prepare for detailed implementation planning.
+| Priority | Activity | Status |
+|----------|----------|--------|
+| 1 | Begin NET-002 Physical Network Topology | Planned |
+| 2 | Develop physical network layout | Planned |
+| 3 | Define physical connectivity | Planned |
+| 4 | Prepare implementation plan | Planned |
 
 ### Sprint Progress
 
@@ -149,133 +261,4 @@ Sprint 2 Progress
 
 ---
 
-## Engineering Session 001
-|         |            |
-|---------|------------|
-| Sprint | Sprint 1 |
-| Phase | Governance Foundation |
-| Date | 2026-07-08 |
-| Duration | 2h 15m |
-| Lead Engineer | George Jordan |
-| Senior Infrastructure Architect | Project Technical Advisor |
-
----
-
-## Objective
-
-Advance STD-001 from initial draft toward a baseline-ready controlled document by implementing the mandatory governance sections required for all controlled documents.
-
-## Work Completed
-
-Completed Activities
-
-✓ 1. Established controlled document architecture.
-
-✓ 2. Added Document Mission.
-
-✓ 3. Added Document Control.
-
-✓ 4. Added Revision History.
-
----
-
-## Deliverables Updated
-
-STD-001 — Document Control Standard
-
-## Decisions Made
-
-No formal governance decisions were approved during this engineering session.
-
-Architectural recommendations remain under review until documented in PM-005 Decision Log.
-
-## Risks
-
-No active risks identified.
-
-## Lessons Learned
-
-The governing standard should comply with its own document control requirements.
-
-Establishing governance before implementation significantly reduces future document rework.
-
-## Next Session
-
-Complete architecture review of STD-001.
-
-Baseline STD-001 Version 1.0.
-
-Update PM-001 to comply with STD-001.
-
-## Sprint Progress
-
-████████░░ 80%
-
-- Review STD-001 ✅
-- Review PM-003 ✅
-
-## Repository Status
-
-| Component     |       Status      |
-| ------------- | :---------------: |
-| Repository    |     🟢 Healthy    |
-| Git           | 🟡 Pending Commit |
-| Documentation |     🟢 Current    |
-
----
-Engineering Session 002
-
-Governance Baseline Review
-
-## Governance Baseline Meeting 001
-
-Outcome
-
-Governance Package Version 1.0 approved.
-
-Sprint 1 closed.
-
-Sprint 2 authorized.
-
-No outstanding governance findings remain.
-
-### Documents Reviewed
-
-- STD-001
-- PM-003
-
-### Outcome
-
-STD-001 approved.
-
-PM-003 approved.
-
-### Findings
-
-No major governance findings.
-
-### Recommendations
-
-Proceed with PM-001 Governance Review.
-
----
-
-## Engineering Journal Status
-
-Current Sprint:
-Sprint 2
-
-Current Phase:
-Network Infrastructure
-
-Latest Engineering Session:
-003
-
-Latest Architecture Gate:
-AGR-001 (PASS)
-
-Current Focus:
-NET-002 – Physical Network Topology
-
----
 
