@@ -27,6 +27,7 @@ The Engineering Session Log provides a chronological record of engineering activ
 | 1.0     | 2026-07-10 | George Jordan | Project Technical Advisor | Baselined as part of Governance Package Version 1.0.                                                                |
 | 1.1     | 2026-07-14 | George Jordan | Project Technical Advisor | Added Engineering Session 003 documenting the Technical Design Review and Architecture Gate Review 001 for NET-001. |
 | **1.2** | 2026-07-15 | George Jordan | Project Technical Advisor | Added Engineering Sessions 004 and 005 documenting NET-002 Physical Network Topology and NET-003 Logical Network Topology engineering activities. |
+| **1.3** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 006 documenting the completion and baseline of NET-004. |
 
 ---
 
@@ -456,3 +457,98 @@ Sprint 2 Progress
 | Repository Status | Healthy |
 
 ---
+
+## Engineering Session 006
+
+| Item | Value |
+|------|-------|
+| Sprint | Sprint 2 |
+| Phase | Network Infrastructure |
+| Date | 2026-07-15 |
+| Duration | 3h 15m |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
+
+---
+
+### Objective
+
+Complete the design, review, and baseline of NET-004 — IP Addressing Plan as the authoritative IPv4 addressing standard for Project Orion.
+
+---
+
+### Work Completed
+
+Completed Activities
+
+✅ Completed the IPv4 Addressing Standard.
+
+✅ Defined structured network address allocation.
+
+✅ Assigned infrastructure device addressing.
+
+✅ Developed DHCP allocation strategy.
+
+✅ Reserved future address ranges.
+
+✅ Designed future VLAN addressing strategy.
+
+✅ Established address management standards.
+
+✅ Documented future expansion considerations.
+
+✅ Added related document references.
+
+✅ Successfully completed Technical Design Authority review.
+
+✅ Baselined NET-004 Version 1.0.
+
+---
+
+### Deliverables Updated
+
+| Document | Version | Status |
+|----------|---------|--------|
+| NET-004 | 1.0 | Baselined |
+
+---
+
+### Engineering Decisions
+
+| Decision | Rationale |
+|----------|-----------|
+| Adopted 192.168.50.0/24 as primary subnet | Provides sufficient capacity while avoiding common consumer defaults. |
+| Standardized static addressing for infrastructure | Improves reliability and operational consistency. |
+| Reserved dedicated address ranges | Simplifies future expansion and minimizes redesign. |
+| Planned VLAN migration strategy | Enables future network segmentation without disrupting the current deployment. |
+
+---
+
+### Review Outcome
+
+| Review | Result |
+|--------|--------|
+| Technical Design Authority Review | PASS |
+| Architecture Review | PASS |
+| Engineering Review | PASS |
+| Baseline Authorization | APPROVED |
+
+---
+
+### Lessons Learned
+
+- Address planning should precede infrastructure deployment.
+- Separating design standards from implementation simplifies long-term maintenance.
+- Early reservation of address space reduces future engineering complexity.
+- Cross-document references improve documentation traceability.
+
+---
+
+### Next Session
+
+Begin NET-005 — Network Device Inventory.
+
+Document all network infrastructure assets, management systems, surveillance devices, IoT equipment, and supporting hardware deployed within Project Orion.
+
+---
+

@@ -20,11 +20,11 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | **Current Sprint** | Sprint 2 |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
-| **Document Version** | 1.1 |
+| **Document Version** | 1.2 |
 | **Status** | Baselined |
 | **Classification** | Internal |
 | **Created** | 2026-06-29 |
-| **Last Updated** | 2026-07-14 |
+| **Last Updated** | 2026-07-15 |
 
 ---
 
@@ -34,6 +34,7 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | ------- | ---------- | ------------- | ------------------------- | ---------------------------------------------------- |
 | **1.0** | 2026-07-10 | George Jordan | Project Technical Advisor | Baselined as part of Governance Package Version 1.0. |
 | **1.1** | 2026-07-14 | George Jordan | Project Technical Advisor | Updated PM-001 following AGR-001 approval; advanced Current Work Plan to NET-002; refreshed Project Progress, Major Milestones, Quick Links, and Architecture Gate. |
+| **1.2** | **2026-07-15** | George Jordan | Project Technical Advisor | Updated PM-001 following NET-004 baseline; advanced Current Work Plan to NET-005; refreshed Project Progress, Major Milestones, and Quick Links. |
 
 ---
 
@@ -74,16 +75,16 @@ The Daily Engineering Brief establishes the objectives for the current engineeri
 | **Current Workstream** | Network Infrastructure |
 | **Current Phase** | Phase 2 – Network Infrastructure |
 | **Current Sprint** | Sprint 2 |
-| **Today's Objective** | Develop NET-002 – Physical Network Topology |
-| **Primary Deliverable** | NET-002 Physical Network Topology (Version 0.1) |
+| **Today's Objective** | Develop NET-005 – Network Device Inventory |
+| **Primary Deliverable** | NET-005 – Network Device Inventory (Version 0.1) |
 
 ### Definition of Done
 
-- [ ] Physical network layout documented.
-- [ ] Device locations identified.
-- [ ] Connectivity between all infrastructure components defined.
-- [ ] Physical topology diagram completed.
-- [ ] Ready for Technical Design Review.
+- Device inventory structure documented.
+- Network infrastructure assets identified.
+- Hardware specifications recorded.
+- Device management information documented.
+- Ready for Technical Design Review.
 
 ---
 
@@ -95,27 +96,30 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 
 ## Project Progress
 
-| Category | Status |
-|----------|--------|
-| **Current Sprint** | Sprint 2 |
-| **Sprint Status** | 🟢 Active |
-| **Completed Deliverables** | ✅ NET-000<br>✅ NET-001 |
-| **Current Deliverable** | ⏳ NET-002 – Physical Network Topology |
-| **Architecture Gate** | ✅ AGR-001 Passed |
-| **Next Milestone** | NET-002 Technical Design |
+| Category                   | Status                                                        |
+| -------------------------- | ------------------------------------------------------------- |
+| **Current Sprint**         | Sprint 2                                                      |
+| **Sprint Status**          | 🟢 Active                                                     |
+| **Completed Deliverables** | ✅ NET-000<br>✅ NET-001<br>✅ NET-002<br>✅ NET-003<br>✅ NET-004 |
+| **Current Deliverable**    | ⏳ NET-005 – Network Device Inventory                          |
+| **Architecture Gate**      | ✅ AGR-001 Passed                                              |
+| **Next Milestone**         | NET-005 Technical Design Review                               |
 
 ---
 
 ## Major Milestones
 
-| Milestone | Status |
-|-----------|--------|
-| Governance Package | ✅ Complete |
-| Sprint 1 | ✅ Complete |
-| NET-000 | ✅ Complete |
-| NET-001 | ✅ Complete |
-| AGR-001 | ✅ Passed |
-| NET-002 | ⏳ In Progress |
+| Milestone          | Status         |
+| ------------------ | -------------- |
+| Governance Package | ✅ Complete     |
+| Sprint 1           | ✅ Complete     |
+| NET-000            | ✅ Complete     |
+| NET-001            | ✅ Complete     |
+| AGR-001            | ✅ Passed       |
+| NET-002            | ✅ Complete     |
+| NET-003            | ✅ Complete     |
+| NET-004            | ✅ Complete     |
+| NET-005            | 🔄 In Progress |
 
 ---
 
@@ -126,7 +130,7 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 - PM-006 Engineering Session Log
 - NET-000 Design Package Index
 - NET-001 Network Architecture
-- NET-002 — Physical Network Topology (Current)
+- NET-005 — Network Device Inventory (Current)
 
 ---
 
