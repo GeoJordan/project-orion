@@ -14,7 +14,7 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Project Baseline | Baseline 1.0 |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
-| Version | 1.2 |
+| Version | 1.4 |
 | Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-08 |
@@ -28,6 +28,7 @@ The Engineering Session Log provides a chronological record of engineering activ
 | 1.1     | 2026-07-14 | George Jordan | Project Technical Advisor | Added Engineering Session 003 documenting the Technical Design Review and Architecture Gate Review 001 for NET-001. |
 | **1.2** | 2026-07-15 | George Jordan | Project Technical Advisor | Added Engineering Sessions 004 and 005 documenting NET-002 Physical Network Topology and NET-003 Logical Network Topology engineering activities. |
 | **1.3** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 006 documenting the completion and baseline of NET-004. |
+| **1.4** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 007 documenting the completion and baseline of NET-005. |
 
 ---
 
@@ -155,15 +156,6 @@ No active risks identified.
 | Priority | Recommendation | Status |
 |----------|----------------|--------|
 | High | Proceed with PM-001 Governance Review | Approved |
-
-### Engineering Journal Status
-| Item                       | Current Status                 |
-| -------------------------- | ------------------------------ |
-| Current Sprint             | Sprint 2                       |
-| Current Phase              | Network Infrastructure         |
-| Latest Engineering Session | Engineering Session 002        |
-| Latest Architecture Gate   | N/A                            |
-| Current Focus              | NET-001 – Network Architecture |
 
 ---
 
@@ -445,19 +437,6 @@ Sprint 2 Progress
 
 ---
 
-## Engineering Journal Status
-
-| Item | Current Status |
-|------|----------------|
-| Current Sprint | Sprint 2 |
-| Current Phase | Network Infrastructure |
-| Latest Engineering Session | Engineering Session 005 |
-| Latest Architecture Gate | AGR-001 (PASS) |
-| Current Focus | NET-004 – IP Addressing Plan |
-| Repository Status | Healthy |
-
----
-
 ## Engineering Session 006
 
 | Item | Value |
@@ -552,3 +531,98 @@ Document all network infrastructure assets, management systems, surveillance dev
 
 ---
 
+## Engineering Session 007
+
+| Item | Value |
+|------|-------|
+| Sprint | Sprint 2 |
+| Phase | Network Infrastructure |
+| Date | 2026-07-15 |
+| Duration | Approximately 9 hours |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
+
+### Objective
+
+Develop, review, and baseline NET-005 – Network Device Inventory as the authoritative operational inventory for Project Orion.
+
+### Work Completed
+
+✅ Developed asset classification standard.
+
+✅ Documented core infrastructure inventory.
+
+✅ Documented servers and management systems.
+
+✅ Documented security and surveillance assets.
+
+✅ Documented end-user devices.
+
+✅ Defined lifecycle management standards.
+
+✅ Defined inventory maintenance standards.
+
+✅ Documented future expansion strategy.
+
+✅ Added related engineering documents.
+
+✅ Successfully completed Technical Design Authority review.
+
+✅ Baselined NET-005 Version 1.0.
+
+### Deliverables Updated
+
+| Document | Version | Status |
+|----------|---------|--------|
+| NET-005 | 1.0 | Baselined |
+
+### Engineering Decisions
+
+| Decision | Rationale |
+|----------|-----------|
+| Standardized asset classification | Supports engineering consistency. |
+| Adopted permanent Asset ID structure | Improves traceability. |
+| Separated hardware from logical services | Simplifies lifecycle management. |
+| Established inventory maintenance standards | Supports long-term governance. |
+
+### Review Outcome
+
+| Review | Result |
+|--------|--------|
+| Technical Design Authority Review | PASS |
+| Engineering Review | PASS |
+| Baseline Authorization | APPROVED |
+
+### Lessons Learned
+
+- Asset inventories should document operational context rather than simply list hardware.
+- Consistent asset identification simplifies engineering management.
+- Lifecycle management improves operational planning.
+- Inventory governance supports long-term maintainability.
+
+### Next Session
+
+Begin NET-006 — Network Naming Standard.
+
+Establish standardized naming conventions for infrastructure devices, servers, IoT assets, management systems, and future Project Orion components.
+
+### Repository Status
+
+| Component | Status |
+|-----------|--------|
+| Repository | 🟢 Healthy |
+| Git | 🟢 Current |
+| Documentation | 🟢 Current |
+
+## Engineering Journal Status
+
+| Item                       | Current Status                    |
+| -------------------------- | --------------------------------- |
+| Current Sprint             | Sprint 2                          |
+| Current Phase              | Network Infrastructure            |
+| Latest Engineering Session | Engineering Session 007           |
+| Latest Architecture Gate   | AGR-001 (PASS)                    |
+| Current Focus              | NET-006 – Network Naming Standard |
+| Repository Status          | Healthy                           |
+
+---
