@@ -18,11 +18,11 @@ This document provides the engineering reference for logical connectivity, trust
 | **Project Baseline** | Baseline 1.0 |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
-| **Version** | 0.1 |
-| **Status** | Draft |
+| **Version** | 1.0 |
+| **Status** | Baselined |
 | **Classification** | Internal |
 | **Created** | 2026-07-15 |
-| **Last Updated** | 2026-07-15 |
+| **Last Updated** | 2026-07-16 |
 
 ---
 
@@ -31,6 +31,7 @@ This document provides the engineering reference for logical connectivity, trust
 | Version | Date | Author | Reviewer | Description |
 |----------|------|--------|----------|-------------|
 | 0.1 | 2026-07-15 | George Jordan | Project Technical Advisor | Initial Logical Network Topology document created. |
+| **1.0** | **2026-07-16** | George Jordan | Project Technical Advisor | Baselined following Sprint 2 Network Design Package review. |
 
 ---
 
@@ -153,6 +154,12 @@ Future enhancements include:
 | Centralized Monitoring | Expand logging, monitoring, and security analytics. |
 
 The proposed segmentation strategy supports the long-term scalability, maintainability, and security objectives established throughout the Project Orion engineering program.
+
+### Engineering Notes
+
+Future logical segmentation shall preserve the communication model, trust boundaries, and least-privilege principles established within this document.
+
+Any future VLAN implementation shall remain consistent with the Project Orion security architecture and implementation standards.
 
 ---
 

@@ -22,11 +22,11 @@ The inventory serves as the primary engineering reference for physical and logic
 | Project Baseline | Baseline 1.0 |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
-| Version | 0.1 |
-| Status | Draft |
+| Version | 1.0 |
+| Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-15 |
-| Last Updated | 2026-07-15 |
+| Last Updated | 2026-07-16 |
 
 ---
 
@@ -35,6 +35,7 @@ The inventory serves as the primary engineering reference for physical and logic
 | Version | Date | Author | Reviewer | Description |
 |----------|------------|---------------|---------------------------|--------------------------------|
 | 0.1 | 2026-07-15 | George Jordan | Project Technical Advisor | Initial draft created. |
+| **1.0** | **2026-07-16** | George Jordan | Project Technical Advisor | Baselined following Sprint 2 Network Design Package review. |
 
 ---
 
@@ -236,6 +237,12 @@ Maintaining current lifecycle information supports engineering planning, configu
 Maintaining an accurate inventory is essential for engineering operations, configuration management, incident response, disaster recovery, security management, and future infrastructure planning.
 
 This document serves as the authoritative operational inventory for all managed Project Orion assets.
+
+### Engineering Notes
+
+The Network Device Inventory shall serve as the authoritative source for asset identification, lifecycle status, and operational ownership within Project Orion.
+
+Engineering teams shall update this inventory whenever infrastructure assets are added, modified, relocated, or retired to ensure continued accuracy and operational readiness.
 
 ---
 

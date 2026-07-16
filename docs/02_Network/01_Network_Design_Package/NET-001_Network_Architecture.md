@@ -25,11 +25,11 @@ The architecture defined in this document shall be reviewed and approved before 
 | **Current Sprint** | Sprint 2 |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Technical Advisor |
-| **Document Version** | 0.1 |
-| **Status** | Under Review |
+| **Document Version** | 1.0 |
+| **Status** | Baselined |
 | **Classification** | Internal |
 | **Created** | 2026-07-13 |
-| **Last Updated** | 2026-07-13 |
+| **Last Updated** | 2026-07-16 |
 
 ---
 
@@ -37,8 +37,9 @@ The architecture defined in this document shall be reviewed and approved before 
 
 | Version | Date | Author | Reviewer | Description |
 |----------|------|--------|----------|-------------|
-| 0.1 | 2026-07-13 | George Jordan | ChatGPT | Initial Network Architecture High-Level Design framework established. |
-| 0.2     | 2026-07-14 | George Jordan | ChatGPT  | Successfully completed Technical Design Review and Architecture Gate Review 001; approved to proceed to detailed engineering design. |
+| 0.1 | 2026-07-13 | George Jordan | Project Technical Advisor | Initial Network Architecture High-Level Design framework established. |
+| 0.2     | 2026-07-14 | George Jordan | Project Technical Advisor  | Successfully completed Technical Design Review and Architecture Gate Review 001; approved to proceed to detailed engineering design. |
+| **1.0** | **2026-07-16** | George Jordan | Project Technical Advisor | Baselined following Sprint 2 Network Design Package review. |
 
 ---
 
@@ -201,10 +202,10 @@ Project Orion adopts a layered network architecture that separates Internet conn
 | NET-002 – Physical Network Topology | Defines the physical layout and connectivity of the Project Orion network infrastructure. |
 | NET-003 – Logical Network Topology | Defines logical network segmentation, traffic flow, and network relationships. |
 | NET-004 – IP Addressing Plan | Defines network addressing, subnet allocation, and address management strategy. |
-| NET-005 – Network Security Design | Documents security architecture, administrative access, and network protection mechanisms. |
-| NET-006 – Network Implementation Plan | Defines the implementation sequence, deployment procedures, and rollback planning. |
-| NET-007 – Network Validation and Testing | Defines network verification, acceptance testing, and operational validation procedures. |
-| NET-008 – Network Operations Guide | Provides operational procedures, maintenance guidance, backup, recovery, and ongoing administration practices. |
+| NET-005 – Network Device Inventory      | Asset inventory and lifecycle management        |
+| NET-006 – Network Naming Standard       | Standardized naming conventions                 |
+| NET-007 – Security Zones & Access Rules | Security architecture and access control        |
+| NET-008 – Implementation & Test Plan    | Deployment, validation, and rollback procedures |
 
 ---
 

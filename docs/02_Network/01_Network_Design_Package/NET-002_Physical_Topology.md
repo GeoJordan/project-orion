@@ -18,11 +18,11 @@ This document supports implementation of the approved network architecture by tr
 | **Project Baseline** | Baseline 1.0 |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
-| **Version** | 0.1 |
-| **Status** | Draft |
+| **Version** | 1.0 |
+| **Status** | Baselined |
 | **Classification** | Internal |
 | **Created** | 2026-07-14 |
-| **Last Updated** | 2026-07-14 |
+| **Last Updated** | 2026-07-16 |
 
 ---
 
@@ -31,6 +31,7 @@ This document supports implementation of the approved network architecture by tr
 | Version | Date | Author | Reviewer | Description |
 |----------|------|--------|----------|-------------|
 | 0.1 | 2026-07-14 | George Jordan | Project Technical Advisor | Initial Physical Network Topology document created. |
+| **1.0** | **2026-07-16** | George Jordan | Project Technical Advisor | Baselined following Sprint 2 Network Design Package review. |
 
 ---
 
@@ -154,6 +155,11 @@ The physical topology serves as the implementation blueprint for subsequent netw
 | PW-04 | Samsung Galaxy Tab A9+ | Internal Battery / Charger | Battery operation | Dashboard remains portable |
 | PW-05 | Reolink Devices | Manufacturer Power Supply | None | Future UPS evaluation |
 
+### Engineering Notes
+
+The physical topology has been designed to minimize cable length, simplify maintenance, improve equipment accessibility, and support future infrastructure expansion without requiring major redesign.
+
+Physical installation shall follow the placement, connectivity, cabling, and power strategies defined within this document.
 ---
 
 ## 12. Installation Considerations
@@ -167,6 +173,12 @@ The physical topology serves as the implementation blueprint for subsequent netw
 | Cable Management | Route cables neatly and label permanent connections. |
 | Future Expansion | Reserve space for additional IoT devices and infrastructure. |
 | Documentation | Update Project Orion documentation after all installation changes. |
+
+### Engineering Notes
+
+Future logical segmentation shall preserve the communication model, trust boundaries, and least-privilege principles established within this document.
+
+Any future VLAN implementation shall remain consistent with the Project Orion security architecture and implementation standards.
 
 ---
 
