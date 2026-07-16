@@ -1,4 +1,16 @@
-# 🚀 Project Orion
+# Project Orion
+
+## Current Release
+
+| Item | Status |
+|------|--------|
+| **Current Version** | **v1.0** |
+| **Release Name** | **Network Design Package** |
+| **Status** | 🟢 Released |
+| **Sprint** | Sprint 2 Complete |
+| **GitHub Release** | [Network Design Package v1.0](https://github.com/GeoJordan/project-orion/releases/latest) |
+
+---
 
 > **Enterprise Infrastructure Engineering Project**
 
@@ -10,25 +22,31 @@
 
 ## Project Status
 
-| Item | Status |
-|------|--------|
-| **Project Status** | 🟢 Active |
-| **Current Phase** | Phase 2 – Network Infrastructure |
-| **Current Sprint** | Sprint 2 |
-| **Governance Package** | ✅ Baselined (Version 1.0) |
-| **Repository Version** | 1.0 |
+| Item                   | Status                                      |
+| ---------------------- | ------------------------------------------- |
+| **Project Status**     | 🟢 Active                                   |
+| **Current Phase**      | **Phase 3 – Infrastructure Implementation** |
+| **Current Sprint**     | **Sprint 3**                                |
+| **Latest Release**     | **Network Design Package v1.0**             |
+| **Repository Version** | **1.0**                                     |
 
 ---
 
 ## Table of Contents
 
+- [Current Release](#-current-release)
 - [Project Vision](#project-vision)
+- [Engineering Methodology](#engineering-methodology)
 - [Objectives](#objectives)
+- [Project Status](#project-status)
 - [Current Project Phase](#current-project-phase)
 - [Technology Stack](#technology-stack)
+- [Architecture Overview](#architecture-overview)
 - [Repository Structure](#repository-structure)
 - [Documentation](#documentation)
 - [Roadmap](#roadmap)
+- [Current Milestone](#current-milestone)
+- [Skills Demonstrated](#skills-demonstrated)
 - [Why Project Orion?](#why-project-orion)
 - [License](#license)
 
@@ -41,6 +59,25 @@ Unlike traditional home lab projects that begin with hardware installation, Proj
 The project establishes enterprise project management, document control, configuration management, engineering standards, and cybersecurity governance before deploying any technical infrastructure.
 
 This mirrors how infrastructure projects are executed within regulated industries such as healthcare.
+
+---
+
+## Engineering Methodology
+
+Project Orion follows a governance-first engineering methodology modeled after enterprise infrastructure projects.
+
+Every implementation follows the same lifecycle:
+
+1. Plan
+2. Design
+3. Review
+4. Baseline
+5. Implement
+6. Validate
+7. Operate
+8. Improve
+
+Each engineering deliverable undergoes Technical Design Authority (TDA) review before being incorporated into the approved project baseline.
 
 ---
 
@@ -77,27 +114,51 @@ Deliverables included:
 - Configuration Management
 
 ---
+## Phase 2 — Network Infrastructure ✅
 
-## Phase 2 — Network Infrastructure 🚧
+Completed
+
+Major Deliverables
+
+- Network Architecture
+- Physical Network Topology
+- Logical Network Topology
+- IP Addressing Plan
+- Network Device Inventory
+- Network Naming Standard
+- Security Zones & Access Rules
+- Implementation & Test Plan
+
+**Release:** Network Design Package v1.0
+
+## Phase 3 — Infrastructure Implementation 🚧
 
 Current Activities
 
-- GL.iNet Flint 2 deployment
-- Network architecture
-- IP address planning
-- Firewall configuration
-- VLAN design
-- Network documentation
+- Configure GL.iNet Flint 2
+- Deploy Home Assistant
+- Configure network services
+- Validate physical infrastructure
+- Capture implementation evidence
 
 ---
 
 # Technology Stack
 
-| Category           | Technologies                                                      |
-| ------------------ | ----------------------------------------------------------------- |
-| Infrastructure     | GL.iNet Flint 2, Dell OptiPlex 7060, Verizon Fios, Home Assistant |
-| Security           | VLANs, Firewall Policies, Secure Remote Access, HIPAA, NIST CSF   |
-| Project Management | Git, GitHub, VS Code, Markdown, Mermaid                           |
+| Category           | Technologies                                      |
+| ------------------ | ------------------------------------------------- |
+| Infrastructure     | GL.iNet Flint 2, Dell OptiPlex 7060, Verizon Fios |
+| **Automation**     | Home Assistant                                    |
+| Security           | VLANs, Firewall Policies, HIPAA, NIST CSF         |
+| Project Management | Git, GitHub, VS Code, Markdown, Mermaid           |
+
+---
+
+## Architecture Overview
+
+![Project Orion High-Level Architecture](images/network/high-level-architecture.png)
+
+---
 
 ## Infrastructure
 
@@ -106,6 +167,8 @@ Current Activities
 - Verizon Fios
 - Home Assistant
 
+---
+
 ## Security
 
 - Network Segmentation
@@ -113,6 +176,8 @@ Current Activities
 - Secure Remote Access
 - HIPAA Security Principles
 - NIST Cybersecurity Framework
+
+---
 
 ## Project Management
 
@@ -134,7 +199,10 @@ project-orion/
 ├── configs/
 ├── diagrams/
 ├── docs/
-├── images/
+├──images/
+|    └── network/
+|          └── high-level-architecture.png
+|
 ├── scripts/
 ├── templates/
 │
@@ -161,48 +229,55 @@ The `docs/` directory contains the controlled engineering documentation for Proj
 
 ---
 
-# Roadmap
+## Roadmap
 
-## Completed
+✅ Phase 1 — Governance
 
-- ✅ Governance Foundation
-- ✅ PMO Framework
-- ✅ Document Control Standard
-- ✅ Configuration Management
-- ✅ Sprint Management
+✅ Phase 2 — Network Design Package
 
-## In Progress
+🚧 Phase 3 — Infrastructure Implementation
 
-- 🚧 Network Infrastructure
-- 🚧 Router Deployment
-- 🚧 Network Documentation
+⬜ Phase 4 — Home Assistant Platform
 
-## Planned
+⬜ Phase 5 — Security Hardening
 
-- Server Deployment
-- Home Assistant
-- Security Hardening
-- Monitoring
-- Disaster Recovery
-- Operational Validation
+⬜ Phase 6 — Monitoring & Automation
+
+⬜ Phase 7 — Operational Readiness
 
 ---
 
 ## Current Milestone
 
-Sprint 2 – Network Infrastructure
+Sprint 3 – Infrastructure Implementation
 
-Current objectives:
+Current Objectives
 
-- Configure the GL.iNet Flint 2
-- Develop the network topology
-- Define the IP addressing plan
-- Validate connectivity
-- Establish the infrastructure baseline
+- Configure the GL.iNet Flint 2 router
+- Deploy Home Assistant
+- Configure core network services
+- Validate network connectivity
+- Capture implementation evidence
+- Verify deployment against the Sprint 2 Network Design Package
 
 ---
 
-# Why Project Orion?
+## Skills Demonstrated
+
+- Enterprise Network Architecture
+- Infrastructure Engineering
+- Systems Administration
+- Technical Documentation
+- Configuration Management
+- Cybersecurity Governance
+- Network Security
+- Project Management
+- Git & GitHub Workflow
+- Technical Design Reviews
+
+---
+
+## Why Project Orion?
 
 Project Orion demonstrates more than technical implementation.
 
@@ -217,12 +292,6 @@ The project follows a lifecycle-based approach similar to those used in healthca
 This project is licensed under the MIT License.
 
 See the [LICENSE](LICENSE) file for complete details.
-
----
-
-## Architecture Overview
-
-> *Network architecture diagram will be added during Sprint 2.*
 
 ---
 
