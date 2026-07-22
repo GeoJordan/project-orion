@@ -18,3 +18,12 @@ is unanimously approved.
 Effective Date
 
 2026-07-10
+
+---
+
+| Decision ID | Decision                                          |
+| ----------- | ------------------------------------------------- |
+| **D-004**   | Documentation Architecture Approved and Baselined |
+
+---
+

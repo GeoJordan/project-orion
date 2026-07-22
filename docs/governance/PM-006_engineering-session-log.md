@@ -14,11 +14,11 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Project Baseline | Baseline 1.0 |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
-| Version | 1.4 |
+| Version | 1.5 |
 | Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-08 |
-| Last Updated | 2026-07-15 |
+| Last Updated | 2026-07-21 |
 
 ## Revision History
 
@@ -29,6 +29,8 @@ The Engineering Session Log provides a chronological record of engineering activ
 | **1.2** | 2026-07-15 | George Jordan | Project Technical Advisor | Added Engineering Sessions 004 and 005 documenting NET-002 Physical Network Topology and NET-003 Logical Network Topology engineering activities. |
 | **1.3** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 006 documenting the completion and baseline of NET-004. |
 | **1.4** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 007 documenting the completion and baseline of NET-005. |
+| **1.5** | **2026-07-21** | George Jordan | Project Technical Advisor | Added Engineering Session 008 documenting the documentation architecture baseline and repository organization. |
+
 
 ---
 
@@ -614,15 +616,94 @@ Establish standardized naming conventions for infrastructure devices, servers, I
 | Git | 🟢 Current |
 | Documentation | 🟢 Current |
 
+---
+
+## Engineering Session 008
+
+| Field | Value |
+|-------|-------|
+| Sprint | Sprint 2 |
+| Phase | Documentation Architecture |
+| Date | 2026-07-21 |
+| Duration | Approximately 4 hours |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
+
+### Objective
+
+Establish and baseline the Project Orion documentation architecture to support scalable engineering documentation, governance, and technology domain management.
+
+### Work Completed
+
+✅ Designed the documentation hierarchy.
+
+✅ Established governance documentation structure.
+
+✅ Established engineering documentation structure.
+
+✅ Organized technology domain documentation.
+
+✅ Standardized repository documentation layout.
+
+✅ Created documentation index structure.
+
+✅ Reviewed repository organization.
+
+### Deliverables Updated
+
+| Deliverable | Action |
+|-------------|--------|
+| Documentation Architecture | Baselined |
+| Governance Framework | Updated |
+| Engineering Framework | Updated |
+| Technology Domain Framework | Updated |
+
+### Engineering Decisions
+
+| Decision | Rationale |
+|----------|-----------|
+| Separate governance from engineering documentation | Improves maintainability and traceability. |
+| Organize documentation by technology domain | Simplifies navigation and future expansion. |
+| Adopt standardized document prefixes | Improves consistency across the repository. |
+
+### Review Outcome
+
+| Item | Status |
+|------|--------|
+| Documentation Review | PASS ✅ |
+| Repository Organization | Approved |
+| Engineering Framework | Approved |
+| Baseline Authorization | APPROVED |
+
+### Lessons Learned
+
+- Establishing a documentation architecture early reduces future restructuring.
+- Separating governance, engineering, and technology domains improves repository organization.
+- Consistent document numbering enhances maintainability.
+
+### Next Session
+
+Begin development of NET-001 — Network Design Package.
+
+### Repository Status
+
+| Component | Status |
+|-----------|--------|
+| Repository | 🟢 Healthy |
+| Git | 🟡 Pending Commit |
+| Documentation | 🟢 Current |
+
+---
+
 ## Engineering Journal Status
 
-| Item                       | Current Status                    |
-| -------------------------- | --------------------------------- |
-| Current Sprint             | Sprint 2                          |
-| Current Phase              | Network Infrastructure            |
-| Latest Engineering Session | Engineering Session 007           |
-| Latest Architecture Gate   | AGR-001 (PASS)                    |
-| Current Focus              | NET-006 – Network Naming Standard |
-| Repository Status          | Healthy                           |
+| Item                       | Current Status                   |
+| -------------------------- | -------------------------------- |
+| Current Sprint             | Sprint 2                         |
+| Current Phase              | Documentation Architecture       |
+| Latest Engineering Session | Engineering Session 008          |
+| Latest Architecture Gate   | AGR-001 (PASS)                   |
+| Current Focus              | NET-001 – Network Design Package |
+| Repository Status          | Healthy                          |
 
 ---
