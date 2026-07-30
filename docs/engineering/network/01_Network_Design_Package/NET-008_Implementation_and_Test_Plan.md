@@ -80,7 +80,7 @@ The Implementation & Test Plan supports the following engineering objectives:
 |--------|----------|------------------|
 | Phase 1 | Hardware Preparation | All hardware installed, inventoried, and powered on. |
 | Phase 2 | Network Configuration | Router configured and Internet connectivity verified. |
-| Phase 3 | Server Deployment | Home Assistant installed and accessible. |
+| Phase 3 | Network Infrastructure Deployment | Home Assistant installed and accessible. |
 | Phase 4 | Device Integration | Cameras, Zigbee coordinator, and IoT devices connected. |
 | Phase 5 | Security Validation | Security zones and administrative access verified. |
 | Phase 6 | Final Acceptance | Deployment documentation completed and environment accepted for operation. |
@@ -101,27 +101,26 @@ Implementation activities shall follow the governance process established for Pr
 
 | Task | Status |
 |------|:------:|
-| Verify all hardware has been received | ☐ |
-| Verify power and network cabling | ☐ |
-| Confirm latest firmware is available | ☐ |
-| Review approved engineering documentation | ☐ |
-| Confirm IP addressing plan is available | ☐ |
+| Verify all hardware has been received | ✅ |
+| Verify power and network cabling | ✅ |
+| Confirm latest firmware is available | ✅ |
+| Review approved engineering documentation | ✅ |
+| Confirm IP addressing plan is available | ✅ |
 | Confirm implementation schedule is approved | ☐ |
-| Create post-deployment configuration backup |    ☐   |
 
 
 ### Deployment Checklist
 
 | Task | Status |
 |------|:------:|
-| Configure GL.iNet Flint 2 router | ☐ |
-| Verify Internet connectivity | ☐ |
+| Configure GL.iNet Flint 2 router | ✅ |
+| Verify Internet connectivity | ✅ |
 | Deploy Home Assistant server | ☐ |
 | Configure network hostnames | ☐ |
 | Connect Reolink cameras | ☐ |
 | Pair Zigbee coordinator | ☐ |
 | Pair IoT sensors | ☐ |
-| Verify administrative access | ☐ |
+| Verify administrative access | ✅ |
 
 ### Post-Deployment Checklist
 
@@ -130,6 +129,7 @@ Implementation activities shall follow the governance process established for Pr
 | Validate security zone communication | ☐ |
 | Confirm all services are operational | ☐ |
 | Verify system documentation is updated | ☐ |
+| Create configuration backup           | ☐ |
 | Record implementation issues (if any) | ☐ |
 | Complete final engineering review | ☐ |
 | Obtain deployment acceptance | ☐ |

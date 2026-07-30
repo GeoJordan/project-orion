@@ -1,8 +1,12 @@
 # PM-006 — Engineering Session Log
 
+---
+
 ## Document Mission
 
 The Engineering Session Log provides a chronological record of engineering activities, implementation progress, governance updates, lessons learned, and technical milestones throughout the lifecycle of Project Orion. It serves as the official engineering journal supporting project traceability, continuous improvement, and knowledge transfer.
+
+---
 
 ## Document Control
 
@@ -14,11 +18,13 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Project Baseline | Baseline 1.0 |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
-| Version | 1.5 |
+| Version | 1.6 |
 | Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-08 |
-| Last Updated | 2026-07-21 |
+| Last Updated | **2026-07-30** |
+
+---
 
 ## Revision History
 
@@ -30,7 +36,7 @@ The Engineering Session Log provides a chronological record of engineering activ
 | **1.3** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 006 documenting the completion and baseline of NET-004. |
 | **1.4** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 007 documenting the completion and baseline of NET-005. |
 | **1.5** | **2026-07-21** | George Jordan | Project Technical Advisor | Added Engineering Session 008 documenting the documentation architecture baseline and repository organization. |
-
+| **1.6** | **2026-07-30** | George Jordan | Project Technical Advisor | Added Engineering Session 009 documenting Sprint 3 network infrastructure deployment, deployment validation, firmware upgrade, deployment evidence baseline, and Sprint 3 closeout. |
 
 ---
 
@@ -695,15 +701,95 @@ Begin development of NET-001 — Network Design Package.
 
 ---
 
-## Engineering Journal Status
+### Engineering Journal Status
 
-| Item                       | Current Status                   |
-| -------------------------- | -------------------------------- |
-| Current Sprint             | Sprint 2                         |
-| Current Phase              | Documentation Architecture       |
-| Latest Engineering Session | Engineering Session 008          |
-| Latest Architecture Gate   | AGR-001 (PASS)                   |
-| Current Focus              | NET-001 – Network Design Package |
-| Repository Status          | Healthy                          |
+| Item                       | Current Status          |
+| -------------------------- | ----------------------- |
+| Current Sprint             | Sprint 4                |
+| Current Phase              | Engineering Management  |
+| Latest Engineering Session | Engineering Session 009 |
+| Latest Architecture Gate   | AGR-001 (PASS)          |
+| Current Focus              | PO-CMDB_v1.0.xlsx       |
+| Repository Status          | Healthy                 |
+
+---
+
+## Engineering Session 009
+
+| Field | Value |
+|-------|-------|
+| Sprint | Sprint 3 |
+| Phase | Network Infrastructure Deployment |
+| Date | 2026-07-30 |
+| Duration | Multiple engineering sessions |
+| Lead Engineer | George Jordan |
+| Senior Infrastructure Architect | Project Technical Advisor |
+
+### Objective
+
+Complete the deployment, validation, documentation, and engineering acceptance of the Project Orion network infrastructure.
+
+### Work Completed
+
+✅ Deployed GL.iNet Flint 2 router
+
+✅ Verified WAN and Internet connectivity
+
+✅ Upgraded firmware from v4.8.3 to v4.9.0
+
+✅ Created deployment evidence repository
+
+✅ Implemented PO-Evidence-Register_v1.0.xlsx
+
+✅ Updated NET-008
+
+✅ Completed Sprint-03_Closeout_Report
+
+### Deliverables Updated
+
+| Deliverable | Action |
+|-------------|--------|
+| NET-008 | Updated |
+| Sprint-03_Closeout_Report | Created |
+| PO-Evidence-Register_v1.0.xlsx | Created |
+| Deployment Evidence Repository | Baselined |
+
+### Engineering Decisions
+
+| Decision | Rationale |
+|----------|-----------|
+| Centralized deployment evidence under docs/engineering | Supports all engineering domains |
+| Deferred LuCI installation | Preserve stable deployment baseline |
+
+### Review Outcome
+
+| Item | Status |
+|------|--------|
+| Deployment Validation | PASS ✅ |
+| Repository Review | PASS ✅ |
+| Sprint Acceptance | APPROVED |
+| Sprint Status | CLOSED |
+
+### Lessons Learned
+
+- Centralized evidence improves maintainability.
+- Governance documents should evolve from deployment experience.
+- Stable baselines should be preserved before introducing optional components.
+
+### Next Session
+
+| Priority | Activity | Status |
+|----------|----------|--------|
+| 1 | Create PO-CMDB_v1.0.xlsx | Planned |
+| 2 | Create PO-Asset-Register_v1.0.xlsx | Planned |
+| 3 | Create PO-IPAM_v1.0.xlsx | Planned |
+
+### Repository Status
+
+| Component | Status |
+|-----------|--------|
+| Repository | 🟢 Healthy |
+| Git | 🟡 Pending Sprint 3 Commit |
+| Documentation | 🟢 Current |
 
 ---

@@ -16,15 +16,15 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | **Document Title** | Project Control Center |
 | **Project** | Project Orion |
 | **Project Baseline** | Baseline 1.0 |
-| **Current Phase** | Phase 2 – Network Infrastructure |
-| **Current Sprint** | Sprint 2 |
+| **Current Phase** | **Phase 3 – Engineering Management** |
+| **Current Sprint** | **Sprint 4** |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
-| **Document Version** | 1.3 |
+| **Document Version** | **1.4** |
 | **Status** | Baselined |
 | **Classification** | Internal |
-| **Created** | 2026-06-29 |
-| **Last Updated** | 2026-07-15 |
+| **Created** | 2026-07-15 |
+| **Last Updated** | **2026-07-30** |
 
 ---
 
@@ -63,7 +63,7 @@ The Project Health Dashboard provides an executive-level view of the overall hea
 | Documentation | 🟢 | Documentation is current and synchronized with implementation. |
 | Risks | 🟢 | No critical risks requiring immediate action. |
 | Overall Project Health |   🟢   | Project remains on track. |
-| **Last Reviewed:** 2026-07-14 |
+| **Last Reviewed:** 2026-07-30 |
 
 ---
 
@@ -71,14 +71,13 @@ The Project Health Dashboard provides an executive-level view of the overall hea
 
 The Daily Engineering Brief establishes the objectives for the current engineering session. It provides a concise summary of the work to be completed, the expected deliverables, and the criteria for successfully completing the session.
 
-| Item                | Current Status                                     |
-| ------------------- | -------------------------------------------------- |
-| Current Workstream  | Network Infrastructure                             |
-| Current Phase       | Phase 2 – Network Infrastructure                   |
-| Current Sprint      | **Sprint 2 – Complete**                            |
-| Primary Deliverable | **Network Design Package Version 1.0 (Baselined)** |
-| Next Objective      | Begin Sprint 3 Planning                            |
-
+| Item                | Current Status                         |
+| ------------------- | -------------------------------------- |
+| Current Workstream  | Engineering Management                 |
+| Current Phase       | Phase 3 – Engineering Management       |
+| Current Sprint      | **Sprint 4 – Ready to Start**          |
+| Primary Deliverable | **PO-CMDB_v1.0.xlsx**                  |
+| Next Objective      | Build the Engineering Management Suite |
 
 ### Definition of Done
 
@@ -98,14 +97,14 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 
 ## Project Progress
 
-| Category                   | Status                                                        |
-| -------------------------- | ------------------------------------------------------------- |
-| **Current Sprint**         | Sprint 2                                                      |
-| **Sprint Status**          | 🟢 Active                                                     |
-| **Completed Deliverables** | ✅ NET-000<br> ✅ NET-001<br> ✅ NET-002<br> ✅ NET-003<br> ✅ NET-004<br> ✅ NET-005<br> ✅ NET-006 |
-| **Current Deliverable**    | ⏳ NET-007 – Security Zones & Access Rules |
-| **Architecture Gate**      | ✅ AGR-001 Passed                                              |
-| **Next Milestone**         | NET-007 Technical Design Review |
+| Category               | Status                                                                            |
+| ---------------------- | --------------------------------------------------------------------------------- |
+| Current Sprint         | Sprint 4                                                                          |
+| Sprint Status          | 🟢 Ready to Start                                                                 |
+| Completed Deliverables | NET-000 through NET-008, Deployment Evidence Repository, Sprint 3 Closeout Report |
+| Current Deliverable    | PO-CMDB_v1.0.xlsx                                                                 |
+| Next Milestone         | Engineering Management Suite Baseline                                             |
+
 
 ---
 
@@ -123,7 +122,9 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 | NET-004            | ✅ Complete     |
 | NET-005            | ✅ Complete     |
 | NET-006            | ✅ Complete     |
-| NET-007            | 🔄 In Progress  |
+| Sprint 3           | ✅ Complete     |
+| Network Infrastructure Deployment | ✅ Complete     |
+| Deployment Evidence Repository Baselined | ✅ Complete  |
 
 ---
 
@@ -137,6 +138,9 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 - NET-005 — Network Device Inventory
 - NET-006 — Network Naming Standard (Current Baselined Standard)
 - NET-007 — Security Zones & Access Rules (Current Working Document)
+- Sprint-03_Closeout_Report
+- PO-Evidence-Register_v1.0.xlsx
+- PM-008 Milestone Register
 
 ---
 
