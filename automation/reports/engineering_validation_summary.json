@@ -1,0 +1,27 @@
+{
+    "platform": "Project Orion Engineering Validation Platform",
+    "validators_executed": 2,
+    "overall_passed": true,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "results": {
+        "cmdb": {
+            "workbook": "docs\\engineering\\engineering-management\\PO-CMDB_v2.0.xlsx",
+            "worksheet": "01_Configuration_Items",
+            "records": 14,
+            "errors": 0,
+            "warnings": 0,
+            "passed": true,
+            "issues": []
+        },
+        "asset_register": {
+            "workbook": "docs\\engineering\\engineering-management\\PO-Asset-Register_v1.0.xlsx",
+            "worksheet": "01_Asset_Register",
+            "records": 9,
+            "errors": 0,
+            "warnings": 0,
+            "passed": true,
+            "issues": []
+        }
+    }
+}

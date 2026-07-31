@@ -1,3 +1,12 @@
 2026-07-31 13:50:16,813 | INFO | __main__ | Starting Project Orion validation.
 2026-07-31 13:50:17,328 | INFO | __main__ | CMDB validation completed: passed=True, errors=0, warnings=0
 2026-07-31 13:50:17,328 | INFO | __main__ | JSON report created: automation\reports\cmdb_validation.json
+2026-07-31 18:14:52,608 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-07-31 18:14:52,609 | INFO | __main__ | Starting CMDB validation.
+2026-07-31 18:14:53,089 | INFO | __main__ | CMDB validation completed: passed=True, errors=0, warnings=0
+2026-07-31 18:14:53,090 | INFO | __main__ | CMDB validation report created: automation\reports\cmdb_validation.json
+2026-07-31 18:14:53,090 | INFO | __main__ | Starting Asset Register validation.
+2026-07-31 18:14:53,257 | INFO | __main__ | Asset validation completed: passed=True, errors=0, warnings=0
+2026-07-31 18:14:53,258 | INFO | __main__ | Asset validation report created: automation\reports\asset_validation.json
+2026-07-31 18:14:53,260 | INFO | __main__ | Engineering validation completed: passed=True, validators=2, errors=0, warnings=0
+2026-07-31 18:14:53,260 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
