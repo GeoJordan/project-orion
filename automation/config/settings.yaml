@@ -1,0 +1,21 @@
+project:
+  name: Project Orion
+  environment: production
+  owner: George Jordan
+
+validation:
+  fail_on_duplicate_ids: true
+  fail_on_missing_required_fields: true
+  warn_on_missing_optional_fields: true
+  validate_cross_workbook_references: true
+
+reporting:
+  output_directory: automation/reports
+  export_csv: true
+  export_json: true
+  include_timestamp: true
+
+logging:
+  level: INFO
+  directory: automation/logs
+

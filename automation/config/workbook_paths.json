@@ -1,0 +1,10 @@
+{
+  "cmdb": "docs/engineering/engineering-management/PO-CMDB_v2.0.xlsx",
+  "asset_register": "docs/engineering/engineering-management/PO-Asset-Register_v1.0.xlsx",
+  "ipam": "docs/engineering/engineering-management/PO-IPAM_v1.0.xlsx",
+  "firmware_tracker": "docs/engineering/engineering-management/PO-Firmware-Tracker_v1.0.xlsx",
+  "maintenance_schedule": "docs/engineering/engineering-management/PO-Maintenance-Schedule_v1.0.xlsx",
+  "change_register": "docs/engineering/engineering-management/PO-Change-Register_v1.0.xlsx",
+  "risk_register": "docs/engineering/engineering-management/PO-Risk-Register_v1.0.xlsx",
+  "test_register": "docs/engineering/engineering-management/PO-Test-Register_v1.0.xlsx"
+}
