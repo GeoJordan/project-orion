@@ -156,7 +156,7 @@ Current Activities
 
 ## Architecture Overview
 
-![Project Orion High-Level Architecture](images/network/high-level-architecture.png)
+![Project Orion High-Level Architecture](assets/architecture/images/project-orion-high-level-architecture-v1.0.png)
 
 ---
 
