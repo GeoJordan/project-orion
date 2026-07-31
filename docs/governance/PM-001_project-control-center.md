@@ -15,13 +15,13 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | **Document ID** | PM-001 |
 | **Document Title** | Project Control Center |
 | **Project** | Project Orion |
-| **Project Baseline** | **Sprint 4 Candidate Baseline** |
+| **Project Baseline** | **Sprint 4 Baseline** |
 | **Current Phase** | **Phase 3 – Engineering Management** |
 | **Current Sprint** | **Sprint 4** |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
 | **Document Version** | **2.0** |
-| **Status** | **Under Review** |
+| **Status** | **Baselined** |
 | **Classification** | Internal |
 | **Created** | 2026-07-15 |
 | **Last Updated** | **2026-07-30** |

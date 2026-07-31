@@ -18,10 +18,10 @@ This document provides executive visibility into project progress, milestone com
 | Document ID      | PM-008                      |
 | Document Title   | Milestone Register          |
 | Project          | Project Orion               |
-| Project Baseline | Sprint 4 Candidate Baseline |
+| Project Baseline | Sprint 4 Baseline           |
 | Current Sprint   | Sprint 4                    |
 | Version          | 2.0                         |
-| Status           | Under Review                |
+| Status           | Baselined                   |
 | Created          | 2026-07-10                  |
 | Last Updated     | 2026-07-31                  |
 
@@ -58,7 +58,7 @@ This document provides executive visibility into project progress, milestone com
 | **M-016** | Test Register Completed                     | ✅ Complete | 2026-07-30 | Engineering validation framework completed.                     |
 | **M-017** | Executive Engineering Dashboard Completed   | ✅ Complete | 2026-07-30 | Consolidated engineering metrics implemented.                   |
 | **M-018** | Sprint 4 Governance Documentation Completed | ✅ Complete | 2026-07-31 | PM-001, PM-006, PM-008, and Sprint 4 Closeout Report finalized. |
-| **M-019** | Sprint 4 Baseline Established               |  ⏳ Pending | —          | Update after Git baseline is created.                           |
+| **M-019** | Sprint 4 Baseline Authorized               | ✅ Complete | 2026-07-31  | Git baseline is created. |
 | **M-020** | Sprint 5 Authorized                         |  ⏳ Pending | —          | Update after Sprint 4 baseline approval.                        |
 
 ---

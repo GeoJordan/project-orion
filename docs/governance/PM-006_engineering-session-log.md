@@ -15,11 +15,11 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Document ID | PM-006 |
 | Document Title | Engineering Session Log |
 | Project | Project Orion |
-| Project Baseline | Sprint 4 Candidate Baseline |
+| Project Baseline | Sprint 4 Baseline |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
 | Version | 2.0 |
-| Status | Under Review |
+| Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-08 |
 | Last Updated | **2026-07-30** |
