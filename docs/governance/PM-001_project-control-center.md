@@ -15,16 +15,17 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | **Document ID** | PM-001 |
 | **Document Title** | Project Control Center |
 | **Project** | Project Orion |
-| **Project Baseline** | Baseline 1.0 |
+| **Project Baseline** | **Sprint 4 Candidate Baseline** |
 | **Current Phase** | **Phase 3 – Engineering Management** |
 | **Current Sprint** | **Sprint 4** |
 | **Owner** | George Jordan |
 | **Technical Advisor** | Project Technical Advisor |
-| **Document Version** | **1.4** |
-| **Status** | Baselined |
+| **Document Version** | **2.0** |
+| **Status** | **Under Review** |
 | **Classification** | Internal |
 | **Created** | 2026-07-15 |
 | **Last Updated** | **2026-07-30** |
+| **Engineering Session** | **021** |
 
 ---
 
@@ -36,6 +37,8 @@ The Project Control Center is the authoritative executive dashboard for Project 
 | **1.1** | 2026-07-14 | George Jordan | Project Technical Advisor | Updated PM-001 following AGR-001 approval; advanced Current Work Plan to NET-002; refreshed Project Progress, Major Milestones, Quick Links, and Architecture Gate. |
 | **1.2** | **2026-07-15** | George Jordan | Project Technical Advisor | Updated PM-001 following NET-004 baseline; advanced Current Work Plan to NET-005; refreshed Project Progress, Major Milestones, and Quick Links. |
 | **1.3** | **2026-07-16** | George Jordan | Project Technical Advisor | Updated following NET-006 baseline; advanced Current Work Plan to NET-007; refreshed Project Progress, Major Milestones, Definition of Done, and Quick Links. |
+| **2.0** | **2026-07-30** | George Jordan | Project Technical Advisor | Updated following completion of Sprint 4 Engineering Management Suite; refreshed executive dashboard, project metrics, milestones, work plan, and Sprint 5 transition planning. |
+
 
 ---
 
@@ -55,14 +58,14 @@ The Project Health Dashboard provides an executive-level view of the overall hea
 
 | Category | Status | Notes |
 |----------|:------:|-------|
-| Scope | 🟢 | Project scope is well defined and controlled. |
-| Schedule | 🟢 | Current sprint is progressing as planned. |
-| Budget | 🟢 | Project remains within the planned budget. |
-| Quality | 🟢 | Documentation and engineering standards are being followed. |
-| Security | 🟢 | Security-first design principles are being applied throughout the project. |
-| Documentation | 🟢 | Documentation is current and synchronized with implementation. |
-| Risks | 🟢 | No critical risks requiring immediate action. |
-| Overall Project Health |   🟢   | Project remains on track. |
+| Scope | 🟢 | Controlled |
+| Schedule | 🟢 | Sprint 4 deliverables completed; governance closeout in progress. |
+| Budget | 🟢 | Within plan. |
+| Quality | 🟢 | Engineering workbooks baselined. |
+| Security | 🟢 | Security-first methodology maintained. |
+| Documentation | 🟢 | Engineering Management Suite completed. |
+| Risks | 🟢 | Remaining items are operational, not critical. |
+| Overall Project Health |   🟢   | On Track. |
 | **Last Reviewed:** 2026-07-30 |
 
 ---
@@ -73,19 +76,20 @@ The Daily Engineering Brief establishes the objectives for the current engineeri
 
 | Item                | Current Status                         |
 | ------------------- | -------------------------------------- |
-| Current Workstream  | Engineering Management                 |
+| Current Workstream  | Sprint 4 Governance Closeout           |
 | Current Phase       | Phase 3 – Engineering Management       |
-| Current Sprint      | **Sprint 4 – Ready to Start**          |
-| Primary Deliverable | **PO-CMDB_v1.0.xlsx**                  |
-| Next Objective      | Build the Engineering Management Suite |
+| Current Sprint      | **Sprint 4**                           |
+| Primary Deliverable | **Sprint 4 Closeout Documentation**    |
+| Next Objective      | **Authorize Sprint 5**                 |
 
 ### Definition of Done
 
-- Security zones identified and documented.
-- Trust boundaries established.
-- Access rules defined for each security zone.
-- Network segmentation strategy documented.
-- Ready for Technical Design Review.
+- Engineering Management Suite completed.
+- Executive dashboard completed.
+- Sprint 4 Closeout Report completed.
+- Governance documents updated.
+- Git baseline created.
+- Sprint 5 authorized.
 
 ---
 
@@ -97,14 +101,39 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 
 ## Project Progress
 
-| Category               | Status                                                                            |
-| ---------------------- | --------------------------------------------------------------------------------- |
-| Current Sprint         | Sprint 4                                                                          |
-| Sprint Status          | 🟢 Ready to Start                                                                 |
-| Completed Deliverables | NET-000 through NET-008, Deployment Evidence Repository, Sprint 3 Closeout Report |
-| Current Deliverable    | PO-CMDB_v1.0.xlsx                                                                 |
-| Next Milestone         | Engineering Management Suite Baseline                                             |
+| Category               | Status                                 |
+| ---------------------- | -------------------------------------- |
+| Current Sprint         | Sprint 4                               |
+| Sprint Status          | 🟡 Governance Closeout                 |
+| Completed Deliverables | Engineering Management Suite completed |
+| Current Deliverable    | Sprint 4 Closeout Documentation        |
+| Next Milestone         | Sprint 5 Authorization                 |
 
+---
+
+## Engineering Management Metrics
+
+| Metric               | Value |
+| -------------------- | ----: |
+| Configuration Items  |    14 |
+| Physical Assets      |     9 |
+| Managed IP Addresses |     5 |
+| Firmware Records     |     5 |
+| Maintenance Tasks    |     6 |
+| Planned Changes      |     4 |
+| Open Risks           |     5 |
+| Planned Tests        |     6 |
+
+---
+
+## Next Major Milestone
+
+| Item                      | Status  |
+| ------------------------- | ------- |
+| Sprint 5 Authorization    | Pending |
+| Python Validation Toolkit | Planned |
+| Power BI Dashboard        | Planned |
+| Automation Framework      | Planned |
 
 ---
 
@@ -116,7 +145,7 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 | Sprint 1           | ✅ Complete     |
 | NET-000            | ✅ Complete     |
 | NET-001            | ✅ Complete     |
-| AGR-001            | ✅ Passed       |
+| AGR-001            | ✅ Complete     |
 | NET-002            | ✅ Complete     |
 | NET-003            | ✅ Complete     |
 | NET-004            | ✅ Complete     |
@@ -125,22 +154,40 @@ The Project Control Center serves as the executive dashboard for Project Orion. 
 | Sprint 3           | ✅ Complete     |
 | Network Infrastructure Deployment | ✅ Complete     |
 | Deployment Evidence Repository Baselined | ✅ Complete  |
+| Engineering Management Suite | ✅ Complete     |
+| PO-CMDB            | ✅ Complete     |
+| PO-Asset Register  | ✅ Complete     |
+| PO-IPAM            | ✅ Complete     |
+| PO-Firmware Tracker| ✅ Complete     |
+| PO-Maintenance Schedule | ✅ Complete     |
+| PO-Change Register | ✅ Complete     |
+| PO-Risk Register   | ✅ Complete     |
+| PO-Test Register   | ✅ Complete     |
+| PO-Engineering Dashboard | ✅ Complete     |
 
 ---
 
 ## Quick Links
 
+### Governance
+
 - PM-003 Sprint Status Tracker
 - PM-005 Decision Log
 - PM-006 Engineering Session Log
-- NET-000 Design Package Index
-- NET-001 Network Architecture
-- NET-005 — Network Device Inventory
-- NET-006 — Network Naming Standard (Current Baselined Standard)
-- NET-007 — Security Zones & Access Rules (Current Working Document)
-- Sprint-03_Closeout_Report
-- PO-Evidence-Register_v1.0.xlsx
 - PM-008 Milestone Register
+
+### Architecture
+
+- NET-000
+- NET-001
+- NET-005
+- NET-006
+- NET-007
+
+### Engineering Management
+
+- PO-CMDB_v2.0.xlsx
+- PO-Asset-Register_v1.0.xlsx
 
 ---
 

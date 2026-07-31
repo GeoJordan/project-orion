@@ -15,11 +15,11 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Document ID | PM-006 |
 | Document Title | Engineering Session Log |
 | Project | Project Orion |
-| Project Baseline | Baseline 1.0 |
+| Project Baseline | Sprint 4 Candidate Baseline |
 | Owner | George Jordan |
 | Technical Advisor | Project Technical Advisor |
-| Version | 1.6 |
-| Status | Baselined |
+| Version | 2.0 |
+| Status | Under Review |
 | Classification | Internal |
 | Created | 2026-07-08 |
 | Last Updated | **2026-07-30** |
@@ -37,6 +37,8 @@ The Engineering Session Log provides a chronological record of engineering activ
 | **1.4** | **2026-07-15** | George Jordan | Project Technical Advisor | Added Engineering Session 007 documenting the completion and baseline of NET-005. |
 | **1.5** | **2026-07-21** | George Jordan | Project Technical Advisor | Added Engineering Session 008 documenting the documentation architecture baseline and repository organization. |
 | **1.6** | **2026-07-30** | George Jordan | Project Technical Advisor | Added Engineering Session 009 documenting Sprint 3 network infrastructure deployment, deployment validation, firmware upgrade, deployment evidence baseline, and Sprint 3 closeout. |
+| **2.0** | **2026-07-30** | Added Engineering Sessions 012–021 documenting the Engineering Management Suite and Sprint 4 governance closeout. |
+
 
 ---
 
@@ -703,14 +705,14 @@ Begin development of NET-001 — Network Design Package.
 
 ### Engineering Journal Status
 
-| Item                       | Current Status          |
-| -------------------------- | ----------------------- |
-| Current Sprint             | Sprint 4                |
-| Current Phase              | Engineering Management  |
-| Latest Engineering Session | Engineering Session 009 |
-| Latest Architecture Gate   | AGR-001 (PASS)          |
-| Current Focus              | PO-CMDB_v1.0.xlsx       |
-| Repository Status          | Healthy                 |
+| Item                       | Current Status                   |
+| -------------------------- | -------------------------------- |
+| Current Sprint             | Sprint 4                         |
+| Current Phase              | Engineering Management           |
+| Latest Engineering Session | **Engineering Session 021**      |
+| Latest Architecture Gate   | AGR-001 (PASS)                   |
+| Current Focus              | **Sprint 4 Governance Closeout** |
+| Repository Status          | Healthy                          |
 
 ---
 
@@ -791,5 +793,181 @@ Complete the deployment, validation, documentation, and engineering acceptance o
 | Repository | 🟢 Healthy |
 | Git | 🟡 Pending Sprint 3 Commit |
 | Documentation | 🟢 Current |
+
+---
+
+## Engineering Session 012
+
+| Field                    | Entry                                                                                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Session ID**           | ES-012                                                                                                                                                                                                                   |
+| **Date**                 | 2026-07-30                                                                                                                                                                                                               |
+| **Sprint**               | Sprint 4                                                                                                                                                                                                                 |
+| **Phase**                | Phase 3 – Engineering Management                                                                                                                                                                                         |
+| **Objective**            | Design and baseline the Configuration Management Database (CMDB).                                                                                                                                                        |
+| **Activities Completed** | Created PO-CMDB_v2.0 workbook with Configuration Items, Relationships, Network Interfaces, Firmware & Software, Lifecycle, Reference Data, and Dashboard worksheets. Established CI IDs as the primary relationship key. |
+| **Deliverables**         | PO-CMDB_v2.0.xlsx                                                                                                                                                                                                        |
+| **Key Decisions**        | Approved the CMDB as the authoritative source for engineering configuration information.                                                                                                                                 |
+| **Outcome**              | Completed                                                                                                                                                                                                                |
+
+---
+
+## Engineering Session 013
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-013       |
+|**Date**          | 2026-07-30   |
+| **Objective**    | Develop engineering asset and IP management capabilities.|
+|**Sprint**        | Sprint 4    |
+|**Phase**         | Phase 3 – Engineering Management  |
+| **Activities Completed** | Created PO-Asset-Register_v1.0 and PO-IPAM_v1.0. Linked Asset IDs to CI IDs and defined IP allocation strategy. |
+| **Deliverables** | PO-Asset-Register_v1.0.xlsx, PO-IPAM_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 014
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-014       |
+| **Date**         | 2026-07-30   |
+| **Objective**    | Standardize Engineering Management Suite architecture.|
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Activities Completed** | Defined workbook standards, document control fields, naming conventions, relationship model, and engineering identifiers. |
+| **Deliverables** | Engineering Management Standards. |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 015
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-015       |
+| **Date**         | 2026-07-30   |
+| **Objective**    | Implement firmware governance. |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Activities Completed** | Created PO-Firmware-Tracker_v1.0 with firmware inventory, update history, advisories, maintenance windows, dashboard, and revision history. |
+| **Deliverables** | PO-Firmware-Tracker_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 016
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-016       |
+| **Date**         | 2026-07-30   |
+| **Objective**    | Implement preventive maintenance management. |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Activities Completed** | Developed PO-Maintenance-Schedule_v1.0, including schedules, maintenance history, preventive checklists, backup verification, and dashboard. |
+| **Deliverables** | PO-Maintenance-Schedule_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 017
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-017       |
+| **Date**         | 2026-07-30   |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Objective**    | Implement engineering change management. |
+| **Activities Completed** | Created PO-Change-Register_v1.0, approvals, implementation log, post-implementation review, and dashboard. |
+| **Deliverables** | PO-Change-Register_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 018
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-018       |
+| **Date**         | 2026-07-30   |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Objective**    | Implement engineering risk management. |
+| **Activities Completed** | Developed PO-Risk-Register_v1.0 with treatments, reviews, metrics, and dashboard. |
+| **Deliverables** | PO-Risk-Register_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 019
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-019       |
+| **Date**         | 2026-07-30   |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Objective**    | Implement engineering validation and testing. |
+| **Activities Completed** | Created PO-Test-Register_v1.0 with test planning, execution, evidence logging, dashboards, and revision history. |
+| **Deliverables** | PO-Test-Register_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 020
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-020      |
+| **Date**         | 2026-07-30   |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Objective**    | Develop executive engineering reporting. |
+| **Activities Completed** | Created PO-Engineering-Dashboard_v1.0 integrating metrics from the CMDB, Asset Register, IPAM, Firmware Tracker, Maintenance Schedule, Change Register, Risk Register, and Test Register into a consolidated executive dashboard. |
+| **Deliverables** | PO-Engineering-Dashboard_v1.0.xlsx |
+| **Outcome**      | Completed  |
+
+---
+
+## Engineering Session 021
+
+| Field            |  Value      | 
+|----------------- |-------------|
+| **Session ID**   | ES-021      |
+| **Date**         | 2026-07-30   |
+| **Sprint**       | Sprint 4    |
+| **Phase**        | Phase 3 – Engineering Management  |
+| **Objective**    | Complete Sprint 4 governance closeout. |
+| **Activities Completed** | Prepared Sprint 4 Closeout Report, updated PM-001 Project Control Center, initiated updates to PM-006 Engineering Session Log, and prepared Sprint 4 governance artifacts for baseline. |
+| **Deliverables** | Sprint 4 Closeout Report, PM-001 v2.0, PM-006 v2.0, PM-008 Milestone Register (Pending), Sprint 4 Git Baseline (Pending). |
+| **Outcome**      | Completed  |
+
+---
+
+## Sprint 4 Summary
+
+Engineering Sessions: 012–021
+
+Primary Deliverables:
+- PO-CMDB_v2.0
+- PO-Asset-Register_v1.0
+- PO-IPAM_v1.0
+- PO-Firmware-Tracker_v1.0
+- PO-Maintenance-Schedule_v1.0
+- PO-Change-Register_v1.0
+- PO-Risk-Register_v1.0
+- PO-Test-Register_v1.0
+- PO-Engineering-Dashboard_v1.0
+
+Sprint Status: Governance Closeout in Progress
+
+Next Engineering Session: ES-022 – Python Engineering Validation Toolkit
+
+Engineering Management Suite Status: Completed
+
+Sprint Authorization: Pending Sprint 5 Approval
 
 ---
