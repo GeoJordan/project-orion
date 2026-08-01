@@ -231,3 +231,22 @@
 2026-08-01 19:21:56,469 | INFO | __main__ | Skipping disabled validator: test_register
 2026-08-01 19:21:56,470 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=1, warnings=3
 2026-08-01 19:21:56,470 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 19:42:14,539 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 19:42:14,540 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 19:42:14,990 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 19:42:14,990 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 19:42:14,990 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 19:42:15,147 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 19:42:15,147 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 19:42:15,148 | INFO | __main__ | Starting ipam validation.
+2026-08-01 19:42:15,308 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 19:42:15,308 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 19:42:15,309 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 19:42:15,477 | INFO | __main__ | firmware_tracker validation completed: passed=False, errors=1, warnings=3
+2026-08-01 19:42:15,477 | INFO | __main__ | firmware_tracker validation report created: automation\reports\firmware_validation.json
+2026-08-01 19:42:15,478 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 19:42:15,478 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 19:42:15,478 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 19:42:15,478 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 19:42:15,480 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=1, warnings=3
+2026-08-01 19:42:15,480 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json

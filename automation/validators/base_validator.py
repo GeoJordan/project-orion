@@ -146,4 +146,4 @@ class BaseValidator:
         return sorted(
             set(required_columns)
             - set(dataframe.columns)
-    )
+        )

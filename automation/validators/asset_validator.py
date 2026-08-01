@@ -76,8 +76,9 @@ class AssetValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        missing_columns = self.REQUIRED_COLUMNS.difference(
-            dataframe.columns
+        missing_columns = self.missing_columns(
+            dataframe,
+            self.REQUIRED_COLUMNS,
         )
 
         for column in sorted(missing_columns):
@@ -131,7 +132,7 @@ class AssetValidator(BaseValidator):
                         f"Asset ID '{asset_id}' does not match "
                         "the required format AST-###."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=asset_id,
                     column="Asset ID",
                 )
@@ -150,7 +151,7 @@ class AssetValidator(BaseValidator):
                 self.add_error(
                     rule="ASSET-DATA-001",
                     message=f"Required field is blank: {column}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=asset_id or None,
                     column=column,
                 )
@@ -169,7 +170,7 @@ class AssetValidator(BaseValidator):
                         f"Linked CI ID '{ci_id}' does not match "
                         "the required format CI-###."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ci_id,
                     column="Linked CI ID",
                 )
@@ -197,7 +198,7 @@ class AssetValidator(BaseValidator):
                 self.add_error(
                     rule="ASSET-CI-002",
                     message=f"Linked CI ID does not exist in CMDB: {ci_id}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ci_id,
                     column="Linked CI ID",
                 )
@@ -229,7 +230,7 @@ class AssetValidator(BaseValidator):
                 message=(
                     f"Duplicate serial number detected: {serial_number}"
                 ),
-                row=index + 4,
+                row=self.excel_row(index, 2),
                 ci_id=self.normalize(
                     dataframe.at[index, "Asset ID"]
                 ) or None,
@@ -252,16 +253,9 @@ class AssetValidator(BaseValidator):
                 self.add_error(
                     rule="ASSET-LIFE-001",
                     message=f"Invalid lifecycle status: {status}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=self.normalize(
                         dataframe.at[index, "Asset ID"]
                     ) or None,
                     column="Lifecycle Status",
                 )
-
-    @staticmethod
-    def normalize(value: object) -> str:
-        if value is None or pd.isna(value):
-            return ""
-
-        return str(value).strip()
