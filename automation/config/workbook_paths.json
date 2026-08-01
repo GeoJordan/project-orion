@@ -16,7 +16,7 @@
 },
 
   "ipam": {
-    "enabled": false,
+    "enabled": true,
     "workbook": "docs/engineering/engineering-management/PO-IPAM_v1.0.xlsx",
     "sheet": "01_IP_Address_Register",
     "validator": "IPAMValidator",

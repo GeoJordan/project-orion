@@ -1025,6 +1025,21 @@ Complete the deployment, validation, documentation, and engineering acceptance o
 
 ---
 
+## Engineering Session 026
+
+| Field                | Value                                                                            |
+| -------------------- | -------------------------------------------------------------------------------- |
+| Session ID           | ES-026                                                                           |
+| Date                 | 2026-08-01                                                                       |
+| Sprint               | Sprint 5                                                                         |
+| Phase                | Phase 4 – Engineering Validation Platform                                        |
+| Objective            | Implement and integrate the IPAM Validator into the configuration-driven Engineering Validation Platform. |
+| Activities Completed | Built `ipam_validator.py`; added IPv4, subnet, gateway, assignment, status, duplicate-address, hostname, and CMDB relationship checks; registered and enabled the validator; completed a successful three-workbook validation run. |
+| Deliverables         | `ipam_validator.py`; updated `validator_registry.py`, `workbook_paths.json`, and `run_validation.py`; generated `ipam_validation.json` and updated consolidated report.                    |
+| Outcome              | Completed                                                                        |
+
+---
+
 ## Sprint 4 Summary
 
 012–021

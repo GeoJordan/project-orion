@@ -72,7 +72,10 @@ def create_validator(
         common_arguments["sheet_name"] = sheet_name
 
     # Asset validation requires the CMDB for cross-workbook checks.
-    if validator_name == "AssetValidator":
+    if validator_name in {
+        "AssetValidator",
+        "IPAMValidator",
+        }:
         cmdb_config = full_configuration.get("cmdb")
 
         if not cmdb_config:

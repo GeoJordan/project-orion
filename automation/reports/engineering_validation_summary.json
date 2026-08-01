@@ -1,6 +1,6 @@
 {
     "platform": "Project Orion Engineering Validation Platform",
-    "validators_executed": 2,
+    "validators_executed": 3,
     "overall_passed": true,
     "total_errors": 0,
     "total_warnings": 0,
@@ -18,6 +18,15 @@
             "workbook": "docs\\engineering\\engineering-management\\PO-Asset-Register_v1.0.xlsx",
             "worksheet": "01_Asset_Register",
             "records": 9,
+            "errors": 0,
+            "warnings": 0,
+            "passed": true,
+            "issues": []
+        },
+        "ipam": {
+            "workbook": "docs\\engineering\\engineering-management\\PO-IPAM_v1.0.xlsx",
+            "worksheet": "01_IP_Address_Register",
+            "records": 5,
             "errors": 0,
             "warnings": 0,
             "passed": true,
