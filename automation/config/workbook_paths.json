@@ -1,10 +1,65 @@
 {
-  "cmdb": "docs/engineering/engineering-management/PO-CMDB_v2.0.xlsx",
-  "asset_register": "docs/engineering/engineering-management/PO-Asset-Register_v1.0.xlsx",
-  "ipam": "docs/engineering/engineering-management/PO-IPAM_v1.0.xlsx",
-  "firmware_tracker": "docs/engineering/engineering-management/PO-Firmware-Tracker_v1.0.xlsx",
-  "maintenance_schedule": "docs/engineering/engineering-management/PO-Maintenance-Schedule_v1.0.xlsx",
-  "change_register": "docs/engineering/engineering-management/PO-Change-Register_v1.0.xlsx",
-  "risk_register": "docs/engineering/engineering-management/PO-Risk-Register_v1.0.xlsx",
-  "test_register": "docs/engineering/engineering-management/PO-Test-Register_v1.0.xlsx"
+  "cmdb": {
+  "enabled": true,
+  "workbook": "docs/engineering/engineering-management/PO-CMDB_v2.0.xlsx",
+  "sheet": "01_Configuration_Items",
+  "validator": "CMDBValidator",
+  "report": "cmdb_validation.json"
+},
+
+  "asset_register": {
+  "enabled": true,
+  "workbook": "docs/engineering/engineering-management/PO-Asset-Register_v1.0.xlsx",
+  "sheet": "01_Asset_Register",
+  "validator": "AssetValidator",
+  "report": "asset_validation.json"
+},
+
+  "ipam": {
+    "enabled": false,
+    "workbook": "docs/engineering/engineering-management/PO-IPAM_v1.0.xlsx",
+    "sheet": "01_IP_Address_Register",
+    "validator": "IPAMValidator",
+    "report": "ipam_validation.json"
+  },
+
+  "firmware_tracker": {
+    "enabled": false,
+    "workbook": "docs/engineering/engineering-management/PO-Firmware-Tracker_v1.0.xlsx",
+    "sheet": "01_Firmware_Register",
+    "validator": "FirmwareValidator",
+    "report": "firmware_validation.json"
+  },
+
+  "maintenance_schedule": {
+    "enabled": false,
+    "workbook": "docs/engineering/engineering-management/PO-Maintenance-Schedule_v1.0.xlsx",
+    "sheet": "01_Maintenance_Schedule",
+    "validator": "MaintenanceValidator",
+    "report": "maintenance_validation.json"
+  },
+
+  "change_register": {
+    "enabled": false,
+    "workbook": "docs/engineering/engineering-management/PO-Change-Register_v1.0.xlsx",
+    "sheet": "01_Change_Register",
+    "validator": "ChangeValidator",
+    "report": "change_validation.json"
+  },
+
+  "risk_register": {
+    "enabled": false,
+    "workbook": "docs/engineering/engineering-management/PO-Risk-Register_v1.0.xlsx",
+    "sheet": "01_Risk_Register",
+    "validator": "RiskValidator",
+    "report": "risk_validation.json"
+  },
+
+  "test_register": {
+    "enabled": false,
+    "workbook": "docs/engineering/engineering-management/PO-Test-Register_v1.0.xlsx",
+    "sheet": "01_Test_Register",
+    "validator": "TestValidator",
+    "report": "test_validation.json"
+  }
 }

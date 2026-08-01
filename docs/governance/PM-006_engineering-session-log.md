@@ -1009,6 +1009,22 @@ Complete the deployment, validation, documentation, and engineering acceptance o
 | **Outcome**              | **Completed**                                                                |
 
 ---
+
+## Engineering Session 025
+
+| Field                | Value                                                                            |
+| -------------------- |--------------------------------------------------------------------------------- |
+| Session ID           | ES-025                                                                           |
+| Date                 | 2026-08-01                                                                                                |
+| Sprint               | Sprint 5                                                                         |
+| Phase                | Phase 4 – Engineering Validation Platform                                        |
+| Objective            | Refactor the Engineering Validation Platform into a configuration-driven execution model. |
+| Activities Completed | Created `validator_registry.py`; expanded `workbook_paths.json`; refactored `run_validation.py`; implemented dynamic validator execution; added disabled-validator handling; preserved consolidated reporting. |
+| Deliverables         | Updated `run_validation.py`, `validator_registry.py`, `workbook_paths.json`      |
+| Outcome              | Completed                                                                                                 |
+
+---
+
 ## Sprint 4 Summary
 
 012–021
