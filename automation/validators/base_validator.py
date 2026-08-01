@@ -94,3 +94,56 @@ class BaseValidator:
                 for issue in self.issues
             ],
         }
+
+    @staticmethod
+    def normalize(value: object) -> str:
+        """
+        Normalize workbook values.
+
+        Converts NaN/None to an empty string and
+        trims surrounding whitespace.
+        """
+
+        try:
+            import pandas as pd
+
+            if value is None or pd.isna(value):
+                return ""
+
+        except Exception:
+            if value is None:
+                return ""
+
+        return str(value).strip()
+
+    @staticmethod
+    def excel_row(
+        dataframe_index: int,
+        header_row: int,
+    ) -> int:
+        """
+        Convert a pandas index to the
+        original Excel row number.
+        """
+
+        return dataframe_index + header_row + 2
+
+    def has_column(
+        self,
+        dataframe,
+        column: str,
+    ) -> bool:
+
+        return column in dataframe.columns
+
+    def missing_columns(
+        self,
+        dataframe,
+        required_columns,
+    ) -> list[str]:
+        """Return required columns missing from the dataframe."""
+
+        return sorted(
+            set(required_columns)
+            - set(dataframe.columns)
+    )

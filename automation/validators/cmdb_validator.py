@@ -66,8 +66,9 @@ class CMDBValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        missing_columns = self.REQUIRED_COLUMNS.difference(
-            dataframe.columns
+        missing_columns = self.missing_columns(
+            dataframe,
+            self.REQUIRED_COLUMNS,
         )
 
         for column in sorted(missing_columns):
@@ -90,7 +91,7 @@ class CMDBValidator(BaseValidator):
             self.add_error(
                 rule="CMDB-ID-001",
                 message=f"Duplicate CI ID detected: {ci_id}",
-                row=index + 5,
+                row=self.excel_row(index, 3),
                 ci_id=ci_id,
                 column="CI ID",
             )
@@ -109,7 +110,7 @@ class CMDBValidator(BaseValidator):
                         f"CI ID '{ci_id}' does not match "
                         "the required format CI-###."
                     ),
-                    row=index + 5,
+                    row=self.excel_row(index, 3),
                     ci_id=ci_id,
                     column="CI ID",
                 )
@@ -128,7 +129,7 @@ class CMDBValidator(BaseValidator):
                 self.add_error(
                     rule="CMDB-DATA-001",
                     message=f"Required field is blank: {column}",
-                    row=index + 5,
+                    row=self.excel_row(index, 3),
                     ci_id=ci_id or None,
                     column=column,
                 )
@@ -149,16 +150,11 @@ class CMDBValidator(BaseValidator):
                 self.add_error(
                     rule="CMDB-STATUS-001",
                     message=f"Invalid operational status: {status}",
-                    row=index + 5,
+                    row=self.excel_row(index, 3),
                     ci_id=self.normalize(
                         dataframe.at[index, "CI ID"]
                     ) or None,
                     column="Operational Status",
                 )
 
-    @staticmethod
-    def normalize(value: object) -> str:
-        if value is None or pd.isna(value):
-            return ""
 
-        return str(value).strip()
