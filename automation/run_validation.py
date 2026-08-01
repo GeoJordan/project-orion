@@ -72,15 +72,18 @@ def create_validator(
         common_arguments["sheet_name"] = sheet_name
 
     # Asset validation requires the CMDB for cross-workbook checks.
+    
+    # Validators that require the CMDB.
     if validator_name in {
         "AssetValidator",
         "IPAMValidator",
-        }:
+        "FirmwareValidator",
+    }:
         cmdb_config = full_configuration.get("cmdb")
 
         if not cmdb_config:
             raise ValueError(
-                "The Asset Validator requires a CMDB configuration entry."
+                f"{validator_name} requires a CMDB configuration entry."
             )
 
         cmdb_workbook = cmdb_config.get("workbook")
@@ -99,8 +102,34 @@ def create_validator(
         if cmdb_sheet:
             common_arguments["cmdb_sheet_name"] = cmdb_sheet
 
-    return validator_class(**common_arguments)
+    # Firmware Validator also requires the Asset Register.
+    if validator_name == "FirmwareValidator":
 
+        asset_config = full_configuration.get("asset_register")
+
+        if not asset_config:
+            raise ValueError(
+                "FirmwareValidator requires an Asset Register configuration."
+            )
+
+        asset_workbook = asset_config.get("workbook")
+
+        if not asset_workbook:
+            raise ValueError(
+                "Asset Register workbook path is missing."
+            )
+
+        common_arguments["asset_workbook_path"] = Path(
+            asset_workbook
+        )
+
+        asset_sheet = asset_config.get("sheet")
+
+        if asset_sheet:
+            common_arguments["asset_sheet_name"] = asset_sheet
+
+
+    return validator_class(**common_arguments)
 
 def report_name_from_config(
     entry_name: str,

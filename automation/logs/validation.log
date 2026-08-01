@@ -42,3 +42,154 @@
 2026-08-01 10:17:05,351 | INFO | __main__ | Skipping disabled validator: test_register
 2026-08-01 10:17:05,351 | INFO | __main__ | Engineering validation completed: passed=True, validators=3, errors=0, warnings=0
 2026-08-01 10:17:05,352 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 12:10:17,767 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 12:10:17,777 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 12:10:18,363 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:10:18,363 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 12:10:18,363 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 12:10:18,534 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:10:18,535 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 12:10:18,535 | INFO | __main__ | Starting ipam validation.
+2026-08-01 12:10:18,703 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:10:18,704 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 12:10:18,704 | INFO | __main__ | Skipping disabled validator: firmware_tracker
+2026-08-01 12:10:18,704 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 12:10:18,704 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 12:10:18,705 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 12:10:18,705 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 12:10:18,706 | INFO | __main__ | Engineering validation completed: passed=True, validators=3, errors=0, warnings=0
+2026-08-01 12:10:18,706 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 12:16:58,837 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 12:16:58,838 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 12:16:59,289 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:16:59,289 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 12:16:59,289 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 12:16:59,453 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:16:59,453 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 12:16:59,453 | INFO | __main__ | Starting ipam validation.
+2026-08-01 12:16:59,615 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:16:59,616 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 12:16:59,616 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 12:16:59,616 | ERROR | __main__ | FirmwareValidator failed to execute: FirmwareValidator.__init__() missing 2 required positional arguments: 'cmdb_workbook_path' and 'asset_workbook_path'
+2026-08-01 12:16:59,617 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 12:16:59,617 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 12:16:59,617 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 12:16:59,617 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 12:16:59,618 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=1, warnings=0
+2026-08-01 12:16:59,618 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 12:38:19,088 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 12:38:19,089 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 12:38:19,545 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:38:19,545 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 12:38:19,546 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 12:38:19,702 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:38:19,702 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 12:38:19,703 | INFO | __main__ | Starting ipam validation.
+2026-08-01 12:38:19,857 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:38:19,857 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 12:38:19,858 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 12:38:19,876 | ERROR | __main__ | FirmwareValidator failed to execute: Worksheet '01_Firmware_Register' not found in PO-Firmware-Tracker_v1.0.xlsx
+2026-08-01 12:38:19,877 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 12:38:19,877 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 12:38:19,877 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 12:38:19,878 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 12:38:19,879 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=1, warnings=0
+2026-08-01 12:38:19,880 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 12:52:07,154 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 12:52:07,155 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 12:52:07,634 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:52:07,634 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 12:52:07,634 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 12:52:07,799 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:52:07,800 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 12:52:07,800 | INFO | __main__ | Starting ipam validation.
+2026-08-01 12:52:07,965 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 12:52:07,965 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 12:52:07,966 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 13:10:16,117 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 13:10:16,118 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 13:10:16,588 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 13:10:16,588 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 13:10:16,588 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 13:10:16,746 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 13:10:16,746 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 13:10:16,746 | INFO | __main__ | Starting ipam validation.
+2026-08-01 13:10:16,903 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 13:10:16,904 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 13:10:16,904 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 13:36:24,742 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 13:36:24,752 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 13:36:25,268 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 13:36:25,268 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 13:36:25,269 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 13:36:25,437 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 13:36:25,437 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 13:36:25,437 | INFO | __main__ | Starting ipam validation.
+2026-08-01 13:36:25,606 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 13:36:25,606 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 13:36:25,607 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 13:36:25,781 | INFO | __main__ | firmware_tracker validation completed: passed=False, errors=12, warnings=4
+2026-08-01 13:36:25,781 | INFO | __main__ | firmware_tracker validation report created: automation\reports\firmware_validation.json
+2026-08-01 13:36:25,781 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 13:36:25,782 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 13:36:25,782 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 13:36:25,782 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 13:36:25,783 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=12, warnings=4
+2026-08-01 13:36:25,783 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 14:22:33,268 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 14:22:33,269 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 14:22:33,726 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:22:33,726 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 14:22:33,727 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 14:22:33,881 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:22:33,882 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 14:22:33,882 | INFO | __main__ | Starting ipam validation.
+2026-08-01 14:22:34,039 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:22:34,040 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 14:22:34,040 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 14:22:34,208 | INFO | __main__ | firmware_tracker validation completed: passed=False, errors=10, warnings=2
+2026-08-01 14:22:34,208 | INFO | __main__ | firmware_tracker validation report created: automation\reports\firmware_validation.json
+2026-08-01 14:22:34,208 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 14:22:34,209 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 14:22:34,209 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 14:22:34,209 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 14:22:34,210 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=10, warnings=2
+2026-08-01 14:22:34,210 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 14:37:42,733 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 14:37:42,734 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 14:37:43,197 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:37:43,197 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 14:37:43,197 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 14:37:43,357 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:37:43,357 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 14:37:43,358 | INFO | __main__ | Starting ipam validation.
+2026-08-01 14:37:43,521 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:37:43,521 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 14:37:43,521 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 14:37:43,702 | INFO | __main__ | firmware_tracker validation completed: passed=False, errors=6, warnings=2
+2026-08-01 14:37:43,703 | INFO | __main__ | firmware_tracker validation report created: automation\reports\firmware_validation.json
+2026-08-01 14:37:43,703 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 14:37:43,703 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 14:37:43,704 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 14:37:43,704 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 14:37:43,705 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=6, warnings=2
+2026-08-01 14:37:43,705 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json
+2026-08-01 14:48:16,558 | INFO | __main__ | Starting Project Orion engineering validation.
+2026-08-01 14:48:16,559 | INFO | __main__ | Starting cmdb validation.
+2026-08-01 14:48:17,003 | INFO | __main__ | cmdb validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:48:17,003 | INFO | __main__ | cmdb validation report created: automation\reports\cmdb_validation.json
+2026-08-01 14:48:17,004 | INFO | __main__ | Starting asset_register validation.
+2026-08-01 14:48:17,160 | INFO | __main__ | asset_register validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:48:17,160 | INFO | __main__ | asset_register validation report created: automation\reports\asset_validation.json
+2026-08-01 14:48:17,161 | INFO | __main__ | Starting ipam validation.
+2026-08-01 14:48:17,316 | INFO | __main__ | ipam validation completed: passed=True, errors=0, warnings=0
+2026-08-01 14:48:17,317 | INFO | __main__ | ipam validation report created: automation\reports\ipam_validation.json
+2026-08-01 14:48:17,317 | INFO | __main__ | Starting firmware_tracker validation.
+2026-08-01 14:48:17,486 | INFO | __main__ | firmware_tracker validation completed: passed=False, errors=1, warnings=3
+2026-08-01 14:48:17,486 | INFO | __main__ | firmware_tracker validation report created: automation\reports\firmware_validation.json
+2026-08-01 14:48:17,487 | INFO | __main__ | Skipping disabled validator: maintenance_schedule
+2026-08-01 14:48:17,487 | INFO | __main__ | Skipping disabled validator: change_register
+2026-08-01 14:48:17,487 | INFO | __main__ | Skipping disabled validator: risk_register
+2026-08-01 14:48:17,487 | INFO | __main__ | Skipping disabled validator: test_register
+2026-08-01 14:48:17,488 | INFO | __main__ | Engineering validation completed: passed=False, validators=4, errors=1, warnings=3
+2026-08-01 14:48:17,489 | INFO | __main__ | Consolidated report created: automation\reports\engineering_validation_summary.json

@@ -24,9 +24,9 @@
   },
 
   "firmware_tracker": {
-    "enabled": false,
+    "enabled": true,
     "workbook": "docs/engineering/engineering-management/PO-Firmware-Tracker_v1.0.xlsx",
-    "sheet": "01_Firmware_Register",
+    "sheet": "01_Firmware_Inventory",
     "validator": "FirmwareValidator",
     "report": "firmware_validation.json"
   },

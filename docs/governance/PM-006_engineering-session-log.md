@@ -22,7 +22,7 @@ The Engineering Session Log provides a chronological record of engineering activ
 | Status | Baselined |
 | Classification | Internal |
 | Created | 2026-07-08 |
-| Last Updated | **2026-07-30** |
+| Last Updated | **2026-08-01** |
 
 ---
 
@@ -51,6 +51,8 @@ The Engineering Session Log provides a chronological record of engineering activ
 | **1.5** | **2026-07-21** | George Jordan | Project Technical Advisor | Added Engineering Session 008 documenting the documentation architecture baseline and repository organization. |
 | **1.6** | **2026-07-30** | George Jordan | Project Technical Advisor | Added Engineering Session 009 documenting Sprint 3 network infrastructure deployment, deployment validation, firmware upgrade, deployment evidence baseline, and Sprint 3 closeout. |
 | **2.0** | **2026-07-30** | Added Engineering Sessions 012–021 documenting the Engineering Management Suite and Sprint 4 governance closeout. |
+| **2.1** | **2026-08-01** | Added Engineering Sessions ES-022 through ES-027 documenting the Engineering Validation Platform architecture, configuration-driven execution framework, CMDB, Asset, IPAM, and Firmware Validator implementation. |
+
 
 ---
 
@@ -1036,6 +1038,21 @@ Complete the deployment, validation, documentation, and engineering acceptance o
 | Objective            | Implement and integrate the IPAM Validator into the configuration-driven Engineering Validation Platform. |
 | Activities Completed | Built `ipam_validator.py`; added IPv4, subnet, gateway, assignment, status, duplicate-address, hostname, and CMDB relationship checks; registered and enabled the validator; completed a successful three-workbook validation run. |
 | Deliverables         | `ipam_validator.py`; updated `validator_registry.py`, `workbook_paths.json`, and `run_validation.py`; generated `ipam_validation.json` and updated consolidated report.                    |
+| Outcome              | Completed                                                                        |
+
+---
+
+## Engineering Session 027
+
+| Field                | Value                                                                            |
+| -------------------- | -------------------------------------------------------------------------------- |
+| Session ID           | ES-027                                                                           |
+| Date                 | 2026-08-01                                                                       |
+| Sprint               | Sprint 5                                                                         |
+| Phase                | Phase 4 – Engineering Validation Platform                                        |
+| Objective            | Implement and integrate the Firmware Validator into the configuration-driven Engineering Validation Platform. |
+| Activities Completed | Built firmware_validator.py; implemented firmware lifecycle validation; added Firmware ID, Asset ID, Linked CI ID, version, compliance, rollback, and lifecycle-aware validation rules; integrated CMDB and Asset Register cross-workbook validation; refined engineering business rules for planned firmware; generated firmware validation reports. |
+| Deliverables         | firmware_validator.py; updated validator_registry.py; updated run_validation.py; updated workbook_paths.json; firmware_validation.json; updated consolidated engineering validation report. |
 | Outcome              | Completed                                                                        |
 
 ---

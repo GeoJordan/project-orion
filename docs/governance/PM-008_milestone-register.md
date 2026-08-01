@@ -77,8 +77,10 @@ This document provides executive visibility into project progress, milestone com
 | **M-022** | Multi-Workbook Validation Operational | ✅ Complete | 2026-07-31 | Successfully executed end-to-end multi-workbook validation using the CMDB and Asset Register validators. Generated individual JSON validation reports and a consolidated engineering validation summary with zero errors and zero warnings. |
 | **M-023** | Multi-Workbook Validation Operational | ✅ Complete | 2026-08-01 | Engineering Validation Platform successfully executed enabled validators dynamically from configuration and skipped disabled validators without controller changes. |
 | **M-024** | Multi-Workbook Validation Operational | ✅ Complete | 2026-08-01 | CMDB, Asset Register, and IPAM validators executed successfully with zero errors and zero warnings; network addressing and CMDB relationship checks operational. |
+| **M-025**    | Firmware Validator Operational | ✅ Complete | **2026-08-01** | Implemented lifecycle-aware firmware validation with CMDB and Asset Register cross-workbook validation. Generated firmware validation reports with one legitimate data-quality finding and operational warnings. |
 
----
+
+--- 
 
 ## Current Project Status
 
@@ -88,7 +90,7 @@ This document provides executive visibility into project progress, milestone com
 | Governance Status  | Baselined                                   |
 | Engineering Status | Engineering Validation Platform Operational |
 | Baseline Status    | Sprint 5 Baseline                           |
-| Next Milestone     | Multi-Workbook Validation                   |
+| Next Milestone     | Maintenance Validator Implementation        |
 | Next Sprint        | Sprint 6 (Future)                           |
 
 ---

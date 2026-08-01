@@ -1,9 +1,9 @@
 {
     "platform": "Project Orion Engineering Validation Platform",
-    "validators_executed": 3,
-    "overall_passed": true,
-    "total_errors": 0,
-    "total_warnings": 0,
+    "validators_executed": 4,
+    "overall_passed": false,
+    "total_errors": 1,
+    "total_warnings": 3,
     "results": {
         "cmdb": {
             "workbook": "docs\\engineering\\engineering-management\\PO-CMDB_v2.0.xlsx",
@@ -31,6 +31,48 @@
             "warnings": 0,
             "passed": true,
             "issues": []
+        },
+        "firmware_tracker": {
+            "workbook": "docs\\engineering\\engineering-management\\PO-Firmware-Tracker_v1.0.xlsx",
+            "worksheet": "01_Firmware_Inventory",
+            "records": 5,
+            "errors": 1,
+            "warnings": 3,
+            "passed": false,
+            "issues": [
+                {
+                    "severity": "ERROR",
+                    "rule": "FIRM-DATA-001",
+                    "message": "Required field is blank: Asset ID",
+                    "row": 6,
+                    "ci_id": "FW-003",
+                    "column": "Asset ID"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-VERSION-001",
+                    "message": "Current Version 'Planned' does not match Approved Version 'Latest Stable'.",
+                    "row": 7,
+                    "ci_id": "FW-004",
+                    "column": "Current Version"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-VERSION-001",
+                    "message": "Current Version 'Planned' does not match Approved Version 'Latest Stable'.",
+                    "row": 8,
+                    "ci_id": "FW-005",
+                    "column": "Current Version"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-DATE-005",
+                    "message": "End of Support date is not populated.",
+                    "row": 8,
+                    "ci_id": "FW-005",
+                    "column": "End of Support"
+                }
+            ]
         }
     }
 }
