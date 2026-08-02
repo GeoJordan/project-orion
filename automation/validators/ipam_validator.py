@@ -313,22 +313,15 @@ class IPAMValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe["Assignment"].items():
-            assignment = self.normalize(value)
-
-            if (
-                assignment
-                and assignment not in self.ALLOWED_ASSIGNMENTS
-            ):
-                self.add_error(
-                    rule="IPAM-ASSIGN-001",
-                    message=f"Invalid assignment type: {assignment}",
-                    row=self.excel_row(index, 2),
-                    ci_id=self.normalize(
-                        dataframe.at[index, "IP ID"]
-                    ) or None,
-                    column="Assignment",
-                )
+        self.validate_allowed_values(
+            dataframe=dataframe,
+            column="Assignment",
+            allowed_values=self.ALLOWED_ASSIGNMENTS,
+            rule="IPAM-ASSIGN-001",
+            message_template="Invalid assignment type: {value}",
+            header_row=2,
+            id_column="IP ID",
+        )
 
     def validate_statuses(
         self,

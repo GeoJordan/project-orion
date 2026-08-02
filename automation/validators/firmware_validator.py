@@ -17,23 +17,23 @@ class FirmwareValidator(BaseValidator):
     ASSET_ID_PATTERN = re.compile(r"^AST-\d{3}$")
 
     REQUIRED_COLUMNS = {
-    "Firmware ID",
-    "Linked CI ID",
-    "Asset ID",
-    "Device",
-    "Vendor",
-    "Current Version",
-    "Approved Version",
-    "Compliance",
-    "Last Updated",
-    "Next Review",
+        "Firmware ID",
+        "Linked CI ID",
+        "Asset ID",
+        "Device",
+        "Vendor",
+        "Current Version",
+        "Approved Version",
+        "Compliance",
+        "Last Updated",
+        "Next Review",
     }
 
     ALLOWED_COMPLIANCE = {
-    "Compliant",
-    "Non-Compliant",
-    "Pending",
-    "Planned",
+        "Compliant",
+        "Non-Compliant",
+        "Pending",
+        "Planned",
     }
 
     ALLOWED_ROLLBACK = {
@@ -142,17 +142,14 @@ class FirmwareValidator(BaseValidator):
     ) -> None:
         """Validate Linked CI ID format."""
 
-        for index, value in dataframe["Linked CI ID"].items():
-            ci_id = self.normalize(value)
-
-            if ci_id and not self.CI_ID_PATTERN.fullmatch(ci_id):
-                self.add_error(
-                    rule="FIRM-CI-001",
-                    message=f"Linked CI ID '{ci_id}' must match CI-###.",
-                    row=self.excel_row(index, 2),
-                    ci_id=ci_id,
-                    column="Linked CI ID",
-                )
+        self.validate_pattern(
+            dataframe=dataframe,
+            column="Linked CI ID",
+            pattern=self.CI_ID_PATTERN,
+            rule="FIRM-CI-001",
+            message_template="Linked CI ID '{value}' must match CI-###.",
+            header_row=2,
+        )
 
     def validate_linked_ci_exists(
         self,
@@ -173,14 +170,14 @@ class FirmwareValidator(BaseValidator):
         }
 
         self.validate_reference_exists(
-        dataframe=dataframe,
-        reference_values=valid_ci_ids,
-        column="Linked CI ID",
-        rule="FIRM-CI-001",
-        message_template="Linked CI ID does not exist in CMDB: {value}",
-        header_row=2,
-        id_column="Firmware ID",
-    )
+            dataframe=dataframe,
+            reference_values=valid_ci_ids,
+            column="Linked CI ID",
+            rule="FIRM-CI-002",
+            message_template="Linked CI ID does not exist in CMDB: {value}",
+            header_row=2,
+            id_column="Firmware ID",
+        )
 
     def validate_asset_id_format(
         self,
@@ -188,20 +185,16 @@ class FirmwareValidator(BaseValidator):
     ) -> None:
         """Validate Asset ID format."""
 
-        for index, value in dataframe["Asset ID"].items():
-            asset_id = self.normalize(value)
-
-            if (
-                asset_id
-                and not self.ASSET_ID_PATTERN.fullmatch(asset_id)
-            ):
-                self.add_error(
-                    rule="FIRM-ASSET-001",
-                    message=f"Asset ID '{asset_id}' must match AST-###.",
-                    row=self.excel_row(index, 2),
-                    ci_id=asset_id,
-                    column="Asset ID",
-                )
+        self.validate_pattern(
+            dataframe=dataframe,
+            column="Asset ID",
+            pattern=self.ASSET_ID_PATTERN,
+            rule="FIRM-ASSET-001",
+            message_template=(
+                "Asset ID '{value}' must match AST-###."
+            ),
+            header_row=2,
+        )
 
     def validate_asset_exists(
         self,
@@ -221,20 +214,17 @@ class FirmwareValidator(BaseValidator):
             if self.normalize(value)
         }
 
-        for index, value in dataframe["Asset ID"].items():
-            asset_id = self.normalize(value)
-
-            if asset_id and asset_id not in valid_asset_ids:
-                self.add_error(
-                    rule="FIRM-ASSET-002",
-                    message=(
-                        "Asset ID does not exist in Asset Register: "
-                        f"{asset_id}"
-                    ),
-                    row=self.excel_row(index, 2),
-                    ci_id=asset_id,
-                    column="Asset ID",
-                )
+        self.validate_reference_exists(
+            dataframe=dataframe,
+            reference_values=valid_asset_ids,
+            column="Asset ID",
+            rule="FIRM-ASSET-002",
+            message_template=(
+                "Asset ID does not exist in Asset Register: {value}"
+            ),
+            header_row=2,
+            id_column="Firmware ID",
+        )
 
     def validate_required_fields(
         self,

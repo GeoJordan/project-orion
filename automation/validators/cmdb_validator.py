@@ -90,7 +90,7 @@ class CMDBValidator(BaseValidator):
             rule="CMDB-ID-001",
             label="CI ID",
             header_row=3,
-    )
+        )
 
     def validate_ci_id_format(
         self,
@@ -108,7 +108,7 @@ class CMDBValidator(BaseValidator):
                 "the required format CI-###."
             ),
             header_row=3,
-    )
+        )
 
     def validate_required_fields(
         self,
