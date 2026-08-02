@@ -3,7 +3,7 @@
     "validators_executed": 4,
     "overall_passed": false,
     "total_errors": 1,
-    "total_warnings": 3,
+    "total_warnings": 7,
     "results": {
         "cmdb": {
             "workbook": "docs\\engineering\\engineering-management\\PO-CMDB_v2.0.xlsx",
@@ -37,7 +37,7 @@
             "worksheet": "01_Firmware_Inventory",
             "records": 5,
             "errors": 1,
-            "warnings": 3,
+            "warnings": 7,
             "passed": false,
             "issues": [
                 {
@@ -63,6 +63,38 @@
                     "row": 8,
                     "ci_id": "FW-005",
                     "column": "Current Version"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-DATE-005",
+                    "message": "End of Support date is not populated.",
+                    "row": 4,
+                    "ci_id": "FW-001",
+                    "column": "End of Support"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-DATE-005",
+                    "message": "End of Support date is not populated.",
+                    "row": 5,
+                    "ci_id": "FW-002",
+                    "column": "End of Support"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-DATE-005",
+                    "message": "End of Support date is not populated.",
+                    "row": 6,
+                    "ci_id": "FW-003",
+                    "column": "End of Support"
+                },
+                {
+                    "severity": "WARNING",
+                    "rule": "FIRM-DATE-005",
+                    "message": "End of Support date is not populated.",
+                    "row": 7,
+                    "ci_id": "FW-004",
+                    "column": "End of Support"
                 },
                 {
                     "severity": "WARNING",

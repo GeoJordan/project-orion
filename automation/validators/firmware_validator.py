@@ -92,8 +92,9 @@ class FirmwareValidator(BaseValidator):
     ) -> None:
         """Validate that all required columns exist."""
 
-        missing_columns = self.REQUIRED_COLUMNS.difference(
-            dataframe.columns
+        missing_columns = self.missing_columns(
+            dataframe,
+            self.REQUIRED_COLUMNS,
         )
 
         for column in sorted(missing_columns):
@@ -127,7 +128,7 @@ class FirmwareValidator(BaseValidator):
             self.add_error(
                 rule="FIRM-ID-001",
                 message=f"Duplicate Firmware ID detected: {firmware_id}",
-                row=index + 4,
+                row=self.excel_row(index, 2),
                 ci_id=firmware_id,
                 column="Firmware ID",
             )
@@ -150,7 +151,7 @@ class FirmwareValidator(BaseValidator):
                     message=(
                         f"Firmware ID '{firmware_id}' must match FW-###."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=firmware_id,
                     column="Firmware ID",
                 )
@@ -168,7 +169,7 @@ class FirmwareValidator(BaseValidator):
                 self.add_error(
                     rule="FIRM-CI-001",
                     message=f"Linked CI ID '{ci_id}' must match CI-###.",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ci_id,
                     column="Linked CI ID",
                 )
@@ -198,7 +199,7 @@ class FirmwareValidator(BaseValidator):
                 self.add_error(
                     rule="FIRM-CI-002",
                     message=f"Linked CI ID does not exist in CMDB: {ci_id}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ci_id,
                     column="Linked CI ID",
                 )
@@ -219,7 +220,7 @@ class FirmwareValidator(BaseValidator):
                 self.add_error(
                     rule="FIRM-ASSET-001",
                     message=f"Asset ID '{asset_id}' must match AST-###.",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=asset_id,
                     column="Asset ID",
                 )
@@ -252,7 +253,7 @@ class FirmwareValidator(BaseValidator):
                         "Asset ID does not exist in Asset Register: "
                         f"{asset_id}"
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=asset_id,
                     column="Asset ID",
                 )
@@ -286,7 +287,7 @@ class FirmwareValidator(BaseValidator):
                 self.add_error(
                     rule="FIRM-DATA-001",
                     message=f"Required field is blank: {column}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=firmware_id or None,
                     column=column,
                 )
@@ -317,7 +318,7 @@ class FirmwareValidator(BaseValidator):
                         f"Current Version '{current_version}' does not "
                         f"match Approved Version '{approved_version}'."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=firmware_id or None,
                     column="Current Version",
                 )
@@ -339,7 +340,7 @@ class FirmwareValidator(BaseValidator):
                 self.add_error(
                     rule="FIRM-COMP-001",
                     message=f"Invalid compliance value: {compliance}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=firmware_id or None,
                     column="Compliance",
                 )
@@ -356,7 +357,7 @@ class FirmwareValidator(BaseValidator):
                     self.add_warning(
                         rule="FIRM-ROLLBACK-001",
                         message=f"Invalid rollback value: {rollback}",
-                        row=index + 4,
+                        row=self.excel_row(index, 2),
                         ci_id=firmware_id or None,
                         column="Rollback Available",
                     )
@@ -378,15 +379,15 @@ class FirmwareValidator(BaseValidator):
             if self.normalize(value):
                 continue
 
-        self.add_warning(
-            rule="FIRM-DATE-005",
-            message="End of Support date is not populated.",
-            row=index + 4,
-            ci_id=self.normalize(
-                dataframe.at[index, "Firmware ID"]
-            ) or None,
-            column="End of Support",
-    )
+            self.add_warning(
+                rule="FIRM-DATE-005",
+                message="End of Support date is not populated.",
+                row=self.excel_row(index, 2),
+                ci_id=self.normalize(
+                    dataframe.at[index, "Firmware ID"]
+                    ) or None,
+                    column="End of Support",
+        )
 
         for column, rule in date_columns.items():
             if column not in dataframe.columns:
@@ -408,18 +409,9 @@ class FirmwareValidator(BaseValidator):
                             f"Invalid or unrecognized date in "
                             f"{column}: {value}"
                         ),
-                        row=index + 4,
+                        row=self.excel_row(index, 2),
                         ci_id=self.normalize(
                             dataframe.at[index, "Firmware ID"]
                         ) or None,
                         column=column,
                     )
-
-    @staticmethod
-    def normalize(value: object) -> str:
-        """Normalize workbook values."""
-
-        if value is None or pd.isna(value):
-            return ""
-
-        return str(value).strip()
