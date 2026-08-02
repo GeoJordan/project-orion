@@ -89,8 +89,9 @@ class IPAMValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        missing_columns = self.REQUIRED_COLUMNS.difference(
-            dataframe.columns
+        missing_columns = self.missing_columns(
+            dataframe,
+            self.REQUIRED_COLUMNS,
         )
 
         for column in sorted(missing_columns):
@@ -122,7 +123,7 @@ class IPAMValidator(BaseValidator):
             self.add_error(
                 rule="IPAM-ID-001",
                 message=f"Duplicate IP ID detected: {ip_id}",
-                row=index + 4,
+                row=self.excel_row(index, 2),
                 ci_id=ip_id,
                 column="IP ID",
             )
@@ -141,7 +142,7 @@ class IPAMValidator(BaseValidator):
                         f"IP ID '{ip_id}' does not match "
                         "the required format IP-###."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ip_id,
                     column="IP ID",
                 )
@@ -160,7 +161,7 @@ class IPAMValidator(BaseValidator):
                 self.add_error(
                     rule="IPAM-DATA-001",
                     message=f"Required field is blank: {column}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ip_id or None,
                     column=column,
                 )
@@ -179,7 +180,7 @@ class IPAMValidator(BaseValidator):
                         f"Linked CI ID '{ci_id}' does not match "
                         "the required format CI-###."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ci_id,
                     column="Linked CI ID",
                 )
@@ -207,7 +208,7 @@ class IPAMValidator(BaseValidator):
                 self.add_error(
                     rule="IPAM-CI-002",
                     message=f"Linked CI ID does not exist in CMDB: {ci_id}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=ci_id,
                     column="Linked CI ID",
                 )
@@ -228,7 +229,7 @@ class IPAMValidator(BaseValidator):
                 self.add_error(
                     rule="IPAM-IP-001",
                     message=f"Invalid IPv4 address: {address}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=self.normalize(
                         dataframe.at[index, "IP ID"]
                     ) or None,
@@ -257,7 +258,7 @@ class IPAMValidator(BaseValidator):
             self.add_error(
                 rule="IPAM-IP-002",
                 message=f"Duplicate IPv4 address detected: {address}",
-                row=index + 4,
+                row=self.excel_row(index, 2),
                 ci_id=self.normalize(
                     dataframe.at[index, "IP ID"]
                 ) or None,
@@ -294,7 +295,7 @@ class IPAMValidator(BaseValidator):
                         f"IPv4 address {address} does not belong "
                         f"to subnet {subnet}."
                     ),
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=self.normalize(
                         record.get("IP ID")
                     ) or None,
@@ -317,7 +318,7 @@ class IPAMValidator(BaseValidator):
                 self.add_error(
                     rule="IPAM-GW-001",
                     message=f"Invalid gateway address: {gateway}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=self.normalize(
                         dataframe.at[index, "IP ID"]
                     ) or None,
@@ -338,7 +339,7 @@ class IPAMValidator(BaseValidator):
                 self.add_error(
                     rule="IPAM-ASSIGN-001",
                     message=f"Invalid assignment type: {assignment}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=self.normalize(
                         dataframe.at[index, "IP ID"]
                     ) or None,
@@ -356,7 +357,7 @@ class IPAMValidator(BaseValidator):
                 self.add_error(
                     rule="IPAM-STATUS-001",
                     message=f"Invalid IPAM status: {status}",
-                    row=index + 4,
+                    row=self.excel_row(index, 2),
                     ci_id=self.normalize(
                         dataframe.at[index, "IP ID"]
                     ) or None,
@@ -386,16 +387,9 @@ class IPAMValidator(BaseValidator):
             self.add_warning(
                 rule="IPAM-HOST-001",
                 message=f"Duplicate hostname detected: {hostname}",
-                row=index + 4,
+                row=self.excel_row(index, 2),
                 ci_id=self.normalize(
                     dataframe.at[index, "IP ID"]
                 ) or None,
                 column="Hostname",
             )
-
-    @staticmethod
-    def normalize(value: object) -> str:
-        if value is None or pd.isna(value):
-            return ""
-
-        return str(value).strip()
