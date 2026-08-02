@@ -294,3 +294,52 @@ class BaseValidator:
                 self.add_warning(**kwargs)
             else:
                 self.add_error(**kwargs)
+
+    def validate_reference_exists(
+        self,
+        dataframe: pd.DataFrame,
+        reference_values: set[str],
+        column: str,
+        rule: str,
+        message_template: str,
+        header_row: int,
+        id_column: str,
+        severity: str = "ERROR",
+    ) -> None:
+        """
+        Validate that values exist in a reference dataset.
+        """
+
+        if not self.has_column(dataframe, column):
+            return
+
+        if not self.has_column(dataframe, id_column):
+            return
+
+        for index, value in dataframe[column].items():
+
+            value = self.normalize(value)
+
+            if not value:
+                continue
+
+            if value in reference_values:
+                continue
+
+            identifier = (
+                self.normalize(dataframe.at[index, id_column])
+                or None
+            )
+
+            kwargs = dict(
+                rule=rule,
+                message=message_template.format(value=value),
+                row=self.excel_row(index, header_row),
+                ci_id=identifier,
+                column=column,
+            )
+
+            if severity.upper() == "WARNING":
+                self.add_warning(**kwargs)
+            else:
+                self.add_error(**kwargs)

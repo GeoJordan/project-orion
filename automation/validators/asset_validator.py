@@ -159,32 +159,34 @@ class AssetValidator(BaseValidator):
                 )
 
     def validate_linked_ci_exists(
-        self,
-        dataframe: pd.DataFrame,
+    self,
+    dataframe: pd.DataFrame,
     ) -> None:
+        """Confirm that each Linked CI ID exists in the CMDB."""
+
         cmdb_dataframe = WorkbookLoader.load_excel(
             workbook_path=self.cmdb_workbook_path,
             sheet_name=self.cmdb_sheet_name,
             header_row=3,
         )
 
-        valid_ci_ids = {
+        cmdb_ids = {
             self.normalize(value)
             for value in cmdb_dataframe["CI ID"]
             if self.normalize(value)
         }
 
-        for index, value in dataframe["Linked CI ID"].items():
-            ci_id = self.normalize(value)
-
-            if ci_id and ci_id not in valid_ci_ids:
-                self.add_error(
-                    rule="ASSET-CI-002",
-                    message=f"Linked CI ID does not exist in CMDB: {ci_id}",
-                    row=self.excel_row(index, 2),
-                    ci_id=ci_id,
-                    column="Linked CI ID",
-                )
+        self.validate_reference_exists(
+            dataframe=dataframe,
+            reference_values=cmdb_ids,
+            column="Linked CI ID",
+            rule="ASSET-CI-002",
+            message_template=(
+                "Linked CI ID does not exist in CMDB: {value}"
+            ),
+            header_row=2,
+            id_column="Asset ID",
+        )
 
     def validate_duplicate_serial_numbers(
         self,
