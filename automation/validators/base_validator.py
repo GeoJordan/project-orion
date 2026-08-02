@@ -202,3 +202,48 @@ class BaseValidator:
                 self.add_warning(**issue_arguments)
             else:
                 self.add_error(**issue_arguments)
+
+    def validate_pattern(
+    self,
+    dataframe,
+    column: str,
+    pattern,
+    rule: str,
+    message_template: str,
+    header_row: int,
+    id_column: str | None = None,
+    ) -> None:
+        """
+        Validate values against a regular expression.
+        """
+
+        if column not in dataframe.columns:
+            return
+
+        for index, value in dataframe[column].items():
+
+            value = self.normalize(value)
+
+            if not value:
+                continue
+
+            if pattern.fullmatch(value):
+                continue
+
+            record_id = value
+
+            if (
+                id_column
+                and id_column in dataframe.columns
+            ):
+                record_id = self.normalize(
+                    dataframe.at[index, id_column]
+                ) or None
+
+            self.add_error(
+                rule=rule,
+                message=message_template.format(value=value),
+                row=self.excel_row(index, header_row),
+                ci_id=record_id,
+                column=column,
+            )

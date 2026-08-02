@@ -124,22 +124,17 @@ class FirmwareValidator(BaseValidator):
     ) -> None:
         """Validate Firmware ID format."""
 
-        for index, value in dataframe["Firmware ID"].items():
-            firmware_id = self.normalize(value)
-
-            if (
-                firmware_id
-                and not self.FIRMWARE_ID_PATTERN.fullmatch(firmware_id)
-            ):
-                self.add_error(
-                    rule="FIRM-ID-002",
-                    message=(
-                        f"Firmware ID '{firmware_id}' must match FW-###."
-                    ),
-                    row=self.excel_row(index, 2),
-                    ci_id=firmware_id,
-                    column="Firmware ID",
-                )
+        self.validate_pattern(
+            dataframe=dataframe,
+            column="Firmware ID",
+            pattern=self.FIRMWARE_ID_PATTERN,
+            rule="FIRM-ID-002",
+            message_template=(
+                "Firmware ID '{value}' does not match "
+                "the required format FW-###."
+            ),
+            header_row=2,
+        )
 
     def validate_linked_ci_format(
         self,

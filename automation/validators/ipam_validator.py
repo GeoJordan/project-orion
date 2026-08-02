@@ -119,20 +119,19 @@ class IPAMValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe["IP ID"].items():
-            ip_id = self.normalize(value)
+        """Validate IP ID format."""
 
-            if ip_id and not self.IP_ID_PATTERN.fullmatch(ip_id):
-                self.add_error(
-                    rule="IPAM-ID-002",
-                    message=(
-                        f"IP ID '{ip_id}' does not match "
-                        "the required format IP-###."
-                    ),
-                    row=self.excel_row(index, 2),
-                    ci_id=ip_id,
-                    column="IP ID",
-                )
+        self.validate_pattern(
+            dataframe=dataframe,
+            column="IP ID",
+            pattern=self.IP_ID_PATTERN,
+            rule="IPAM-ID-002",
+            message_template=(
+                "IP ID '{value}' does not match "
+                "the required format IP-###."
+            ),
+            header_row=2,
+        )
 
     def validate_required_fields(
         self,

@@ -96,20 +96,19 @@ class CMDBValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe["CI ID"].items():
-            ci_id = self.normalize(value)
+        """Validate CI ID format."""
 
-            if ci_id and not self.CI_ID_PATTERN.fullmatch(ci_id):
-                self.add_error(
-                    rule="CMDB-ID-002",
-                    message=(
-                        f"CI ID '{ci_id}' does not match "
-                        "the required format CI-###."
-                    ),
-                    row=self.excel_row(index, 3),
-                    ci_id=ci_id,
-                    column="CI ID",
-                )
+        self.validate_pattern(
+            dataframe=dataframe,
+            column="CI ID",
+            pattern=self.CI_ID_PATTERN,
+            rule="CMDB-ID-002",
+            message_template=(
+                "CI ID '{value}' does not match "
+                "the required format CI-###."
+            ),
+            header_row=3,
+    )
 
     def validate_required_fields(
         self,

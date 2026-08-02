@@ -106,23 +106,19 @@ class AssetValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe["Asset ID"].items():
-            asset_id = self.normalize(value)
+        """Validate Asset ID format."""
 
-            if (
-                asset_id
-                and not self.ASSET_ID_PATTERN.fullmatch(asset_id)
-            ):
-                self.add_error(
-                    rule="ASSET-ID-002",
-                    message=(
-                        f"Asset ID '{asset_id}' does not match "
-                        "the required format AST-###."
-                    ),
-                    row=self.excel_row(index, 2),
-                    ci_id=asset_id,
-                    column="Asset ID",
-                )
+        self.validate_pattern(
+            dataframe=dataframe,
+            column="Asset ID",
+            pattern=self.ASSET_ID_PATTERN,
+            rule="ASSET-ID-002",
+            message_template=(
+                "Asset ID '{value}' does not match "
+                "the required format ASSET-###."
+            ),
+            header_row=2,
+        )
 
     def validate_required_fields(
         self,
