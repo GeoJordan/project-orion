@@ -81,6 +81,20 @@ Each engineering deliverable undergoes Technical Design Authority (TDA) review b
 
 ---
 
+## Architecture Principles
+
+Project Orion follows several core engineering principles:
+
+- Governance First
+- Security by Design
+- Infrastructure as Documentation
+- Configuration Before Implementation
+- Reusable Validation Framework
+- Continuous Validation
+- Incremental Engineering
+
+---
+
 # Objectives
 
 Project Orion demonstrates practical experience in:
@@ -204,10 +218,9 @@ project-orion/
 ├── configs/
 ├── diagrams/
 ├── docs/
-├──images/
-|    └── network/
-|          └── high-level-architecture.png
-|
+├── images/
+│   └── network/
+│       └── high-level-architecture.png
 ├── scripts/
 ├── templates/
 │
@@ -289,6 +302,25 @@ Project Orion demonstrates more than technical implementation.
 It showcases the ability to plan, govern, document, secure, and operate enterprise infrastructure using disciplined engineering and project management practices.
 
 The project follows a lifecycle-based approach similar to those used in healthcare, government, and other regulated industries.
+
+---
+
+## Validation Framework
+
+Project Orion includes a reusable validation framework built around a shared `BaseValidator`.
+
+### Shared Validation Engines
+
+The reusable `BaseValidator` provides common validation services for all engineering workbooks.
+
+| Engine | Purpose |
+|--------|---------|
+| Duplicate Validation | Detect duplicate identifiers and records |
+| Pattern Validation | Validate IDs using regular expressions |
+| Allowed Value Validation | Enforce controlled vocabularies |
+| Cross-Workbook Reference Validation | Verify relationships between engineering workbooks |
+
+This architecture minimizes duplicated code while ensuring consistent validation behavior across the CMDB, Asset Register, IP Address Register, and Firmware Inventory.
 
 ---
 
