@@ -82,19 +82,15 @@ class CMDBValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        ci_ids = dataframe["CI ID"].fillna("").astype(str).str.strip()
-        duplicate_mask = ci_ids.ne("") & ci_ids.duplicated(keep=False)
+        """Validate duplicate CI IDs."""
 
-        for index in dataframe.index[duplicate_mask]:
-            ci_id = ci_ids.loc[index]
-
-            self.add_error(
-                rule="CMDB-ID-001",
-                message=f"Duplicate CI ID detected: {ci_id}",
-                row=self.excel_row(index, 3),
-                ci_id=ci_id,
-                column="CI ID",
-            )
+        self.validate_duplicates(
+            dataframe=dataframe,
+            column="CI ID",
+            rule="CMDB-ID-001",
+            label="CI ID",
+            header_row=3,
+    )
 
     def validate_ci_id_format(
         self,

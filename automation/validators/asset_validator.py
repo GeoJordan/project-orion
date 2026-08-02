@@ -92,28 +92,15 @@ class AssetValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        asset_ids = (
-            dataframe["Asset ID"]
-            .fillna("")
-            .astype(str)
-            .str.strip()
+        """Validate duplicate Asset IDs."""
+
+        self.validate_duplicates(
+            dataframe=dataframe,
+            column="Asset ID",
+            rule="ASSET-ID-001",
+            label="Asset ID",
+            header_row=2,
         )
-
-        duplicate_mask = (
-            asset_ids.ne("")
-            & asset_ids.duplicated(keep=False)
-        )
-
-        for index in dataframe.index[duplicate_mask]:
-            asset_id = asset_ids.loc[index]
-
-            self.add_error(
-                rule="ASSET-ID-001",
-                message=f"Duplicate Asset ID detected: {asset_id}",
-                row=index + 4,
-                ci_id=asset_id,
-                column="Asset ID",
-            )
 
     def validate_asset_id_format(
         self,
@@ -207,35 +194,17 @@ class AssetValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        if "Serial Number" not in dataframe.columns:
-            return
+        """Validate duplicate serial numbers."""
 
-        serial_numbers = (
-            dataframe["Serial Number"]
-            .fillna("")
-            .astype(str)
-            .str.strip()
+        self.validate_duplicates(
+            dataframe=dataframe,
+            column="Serial Number",
+            rule="ASSET-SERIAL-001",
+            label="serial number",
+            header_row=2,
+            id_column="Asset ID",
+            severity="WARNING",
         )
-
-        duplicate_mask = (
-            serial_numbers.ne("")
-            & serial_numbers.duplicated(keep=False)
-        )
-
-        for index in dataframe.index[duplicate_mask]:
-            serial_number = serial_numbers.loc[index]
-
-            self.add_warning(
-                rule="ASSET-SERIAL-001",
-                message=(
-                    f"Duplicate serial number detected: {serial_number}"
-                ),
-                row=self.excel_row(index, 2),
-                ci_id=self.normalize(
-                    dataframe.at[index, "Asset ID"]
-                ) or None,
-                column="Serial Number",
-            )
 
     def validate_lifecycle_status(
         self,

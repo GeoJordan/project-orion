@@ -108,31 +108,16 @@ class FirmwareValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        """Detect duplicate Firmware IDs."""
+        """Validate duplicate Firmware IDs."""
 
-        firmware_ids = (
-            dataframe["Firmware ID"]
-            .fillna("")
-            .astype(str)
-            .str.strip()
+        self.validate_duplicates(
+            dataframe=dataframe,
+            column="Firmware ID",
+            rule="FIRM-ID-001",
+            label="Firmware ID",
+            header_row=2,
         )
-
-        duplicate_mask = (
-            firmware_ids.ne("")
-            & firmware_ids.duplicated(keep=False)
-        )
-
-        for index in dataframe.index[duplicate_mask]:
-            firmware_id = firmware_ids.loc[index]
-
-            self.add_error(
-                rule="FIRM-ID-001",
-                message=f"Duplicate Firmware ID detected: {firmware_id}",
-                row=self.excel_row(index, 2),
-                ci_id=firmware_id,
-                column="Firmware ID",
-            )
-
+        
     def validate_firmware_id_format(
         self,
         dataframe: pd.DataFrame,

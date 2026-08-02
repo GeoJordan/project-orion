@@ -105,28 +105,15 @@ class IPAMValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        ip_ids = (
-            dataframe["IP ID"]
-            .fillna("")
-            .astype(str)
-            .str.strip()
+        """Validate duplicate IP IDs."""
+
+        self.validate_duplicates(
+            dataframe=dataframe,
+            column="IP ID",
+            rule="IPAM-ID-001",
+            label="IP ID",
+            header_row=2,
         )
-
-        duplicate_mask = (
-            ip_ids.ne("")
-            & ip_ids.duplicated(keep=False)
-        )
-
-        for index in dataframe.index[duplicate_mask]:
-            ip_id = ip_ids.loc[index]
-
-            self.add_error(
-                rule="IPAM-ID-001",
-                message=f"Duplicate IP ID detected: {ip_id}",
-                row=self.excel_row(index, 2),
-                ci_id=ip_id,
-                column="IP ID",
-            )
 
     def validate_ip_id_format(
         self,

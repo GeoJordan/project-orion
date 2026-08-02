@@ -147,3 +147,58 @@ class BaseValidator:
             set(required_columns)
             - set(dataframe.columns)
         )
+
+    def validate_duplicates(
+    self,
+    dataframe,
+    column: str,
+    rule: str,
+    label: str,
+    header_row: int,
+    id_column: str | None = None,
+    severity: str = "ERROR",
+    ) -> None:
+        """Detect duplicate non-blank values in a dataframe column."""
+
+        if column not in dataframe.columns:
+            return
+
+        values = (
+            dataframe[column]
+            .fillna("")
+            .astype(str)
+            .str.strip()
+    )
+
+        duplicate_mask = (
+            values.ne("")
+            & values.duplicated(keep=False)
+        )
+
+        for index in dataframe.index[duplicate_mask]:
+            value = values.loc[index]
+
+            record_id = value
+
+            if (
+                id_column
+                and id_column in dataframe.columns
+            ):
+                record_id = self.normalize(
+                    dataframe.at[index, id_column]
+                ) or None
+
+            message = f"Duplicate {label} detected: {value}"
+
+            issue_arguments = {
+                "rule": rule,
+                "message": message,
+                "row": self.excel_row(index, header_row),
+                "ci_id": record_id,
+                "column": column,
+            }
+
+            if severity.upper() == "WARNING":
+                self.add_warning(**issue_arguments)
+            else:
+                self.add_error(**issue_arguments)
