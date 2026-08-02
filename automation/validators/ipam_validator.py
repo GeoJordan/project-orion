@@ -187,17 +187,15 @@ class IPAMValidator(BaseValidator):
             if self.normalize(value)
         }
 
-        for index, value in dataframe["Linked CI ID"].items():
-            ci_id = self.normalize(value)
-
-            if ci_id and ci_id not in valid_ci_ids:
-                self.add_error(
-                    rule="IPAM-CI-002",
-                    message=f"Linked CI ID does not exist in CMDB: {ci_id}",
-                    row=self.excel_row(index, 2),
-                    ci_id=ci_id,
-                    column="Linked CI ID",
-                )
+        self.validate_reference_exists(
+            dataframe=dataframe,
+            reference_values=valid_ci_ids,
+            column="Linked CI ID",
+            rule="IPAM-CI-001",
+            message_template="Linked CI ID does not exist in CMDB: {value}",
+            header_row=2,
+            id_column="IP ID",
+        )
 
     def validate_ipv4_addresses(
         self,
@@ -347,7 +345,7 @@ class IPAMValidator(BaseValidator):
             header_row=2,
             id_column="IP ID",
         )
-        
+
     def validate_duplicate_hostnames(
         self,
         dataframe: pd.DataFrame,
