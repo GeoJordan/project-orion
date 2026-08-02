@@ -133,23 +133,14 @@ class CMDBValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe[
-            "Operational Status"
-        ].items():
-            status = self.normalize(value)
+        """Validate operational status."""
 
-            if (
-                status
-                and status not in self.ALLOWED_OPERATIONAL_STATUSES
-            ):
-                self.add_error(
-                    rule="CMDB-STATUS-001",
-                    message=f"Invalid operational status: {status}",
-                    row=self.excel_row(index, 3),
-                    ci_id=self.normalize(
-                        dataframe.at[index, "CI ID"]
-                    ) or None,
-                    column="Operational Status",
-                )
-
-
+        self.validate_allowed_values(
+            dataframe=dataframe,
+            column="Operational Status",
+            allowed_values=self.ALLOWED_OPERATIONAL_STATUSES,
+            rule="CMDB-STATUS-001",
+            message_template="Invalid operational status: {value}",
+            header_row=3,
+            id_column="CI ID",
+        )

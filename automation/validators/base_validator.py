@@ -247,3 +247,50 @@ class BaseValidator:
                 ci_id=record_id,
                 column=column,
             )
+    def validate_allowed_values(
+    self,
+    dataframe: pd.DataFrame,
+    column: str,
+    allowed_values: set[str],
+    rule: str,
+    message_template: str,
+    header_row: int,
+    id_column: str,
+    severity: str = "ERROR",
+    ) -> None:
+        """
+        Validate that column values belong to an approved set.
+        """
+
+        if not self.has_column(dataframe, column):
+            return
+
+        if not self.has_column(dataframe, id_column):
+            return
+
+        for index, value in dataframe[column].items():
+
+            normalized = self.normalize(value)
+
+            if not normalized:
+                continue
+
+            if normalized in allowed_values:
+                continue
+
+            identifier = self.normalize(
+                dataframe.at[index, id_column]
+            ) or None
+
+            kwargs = dict(
+                rule=rule,
+                message=message_template.format(value=normalized),
+                row=self.excel_row(index, header_row),
+                ci_id=identifier,
+                column=column,
+            )
+
+            if severity.upper() == "WARNING":
+                self.add_warning(**kwargs)
+            else:
+                self.add_error(**kwargs)

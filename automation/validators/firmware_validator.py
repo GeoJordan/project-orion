@@ -307,41 +307,18 @@ class FirmwareValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        """Validate firmware compliance and rollback values."""
+        """Validate compliance status."""
 
-        for index, record in dataframe.iterrows():
-            firmware_id = self.normalize(record.get("Firmware ID"))
-            compliance = self.normalize(record.get("Compliance"))
-
-            if (
-                compliance
-                and compliance not in self.ALLOWED_COMPLIANCE
-            ):
-                self.add_error(
-                    rule="FIRM-COMP-001",
-                    message=f"Invalid compliance value: {compliance}",
-                    row=self.excel_row(index, 2),
-                    ci_id=firmware_id or None,
-                    column="Compliance",
-                )
-
-            if "Rollback Available" in dataframe.columns:
-                rollback = self.normalize(
-                    record.get("Rollback Available")
-                )
-
-                if (
-                    rollback
-                    and rollback not in self.ALLOWED_ROLLBACK
-                ):
-                    self.add_warning(
-                        rule="FIRM-ROLLBACK-001",
-                        message=f"Invalid rollback value: {rollback}",
-                        row=self.excel_row(index, 2),
-                        ci_id=firmware_id or None,
-                        column="Rollback Available",
-                    )
-
+        self.validate_allowed_values(
+            dataframe=dataframe,
+            column="Compliance",
+            allowed_values=self.ALLOWED_COMPLIANCE,
+            rule="FIRM-COMP-001",
+            message_template="Invalid compliance status: {value}",
+            header_row=2,
+            id_column="Firmware ID",
+        )
+        
     def validate_dates(
         self,
         dataframe: pd.DataFrame,

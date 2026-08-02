@@ -206,21 +206,14 @@ class AssetValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe[
-            "Lifecycle Status"
-        ].items():
-            status = self.normalize(value)
+        """Validate lifecycle status."""
 
-            if (
-                status
-                and status not in self.ALLOWED_LIFECYCLE_STATUSES
-            ):
-                self.add_error(
-                    rule="ASSET-LIFE-001",
-                    message=f"Invalid lifecycle status: {status}",
-                    row=self.excel_row(index, 2),
-                    ci_id=self.normalize(
-                        dataframe.at[index, "Asset ID"]
-                    ) or None,
-                    column="Lifecycle Status",
-                )
+        self.validate_allowed_values(
+            dataframe=dataframe,
+            column="Lifecycle Status",
+            allowed_values=self.ALLOWED_LIFECYCLE_STATUSES,
+            rule="ASSET-LIFECYCLE-001",
+            message_template="Invalid lifecycle status: {value}",
+            header_row=2,
+            id_column="Asset ID",
+        )

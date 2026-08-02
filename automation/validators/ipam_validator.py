@@ -336,20 +336,18 @@ class IPAMValidator(BaseValidator):
         self,
         dataframe: pd.DataFrame,
     ) -> None:
-        for index, value in dataframe["Status"].items():
-            status = self.normalize(value)
+        """Validate IP status."""
 
-            if status and status not in self.ALLOWED_STATUSES:
-                self.add_error(
-                    rule="IPAM-STATUS-001",
-                    message=f"Invalid IPAM status: {status}",
-                    row=self.excel_row(index, 2),
-                    ci_id=self.normalize(
-                        dataframe.at[index, "IP ID"]
-                    ) or None,
-                    column="Status",
-                )
-
+        self.validate_allowed_values(
+            dataframe=dataframe,
+            column="Status",
+            allowed_values=self.ALLOWED_STATUSES,
+            rule="IPAM-STATUS-001",
+            message_template="Invalid IP status: {value}",
+            header_row=2,
+            id_column="IP ID",
+        )
+        
     def validate_duplicate_hostnames(
         self,
         dataframe: pd.DataFrame,
