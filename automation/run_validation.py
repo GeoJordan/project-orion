@@ -78,6 +78,7 @@ def create_validator(
         "AssetValidator",
         "IPAMValidator",
         "FirmwareValidator",
+        "MaintenanceValidator",
     }:
         cmdb_config = full_configuration.get("cmdb")
 
@@ -103,7 +104,10 @@ def create_validator(
             common_arguments["cmdb_sheet_name"] = cmdb_sheet
 
     # Firmware Validator also requires the Asset Register.
-    if validator_name == "FirmwareValidator":
+    if validator_name in {
+        "FirmwareValidator",
+        "MaintenanceValidator",
+        }:
 
         asset_config = full_configuration.get("asset_register")
 

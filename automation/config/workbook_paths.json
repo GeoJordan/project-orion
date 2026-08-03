@@ -32,7 +32,7 @@
   },
 
   "maintenance_schedule": {
-    "enabled": false,
+    "enabled": true,
     "workbook": "docs/engineering/engineering-management/PO-Maintenance-Schedule_v1.0.xlsx",
     "sheet": "01_Maintenance_Schedule",
     "validator": "MaintenanceValidator",

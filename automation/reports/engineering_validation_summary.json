@@ -1,6 +1,6 @@
 {
     "platform": "Project Orion Engineering Validation Platform",
-    "validators_executed": 4,
+    "validators_executed": 5,
     "overall_passed": false,
     "total_errors": 1,
     "total_warnings": 7,
@@ -105,6 +105,15 @@
                     "column": "End of Support"
                 }
             ]
+        },
+        "maintenance_schedule": {
+            "workbook": "docs\\engineering\\engineering-management\\PO-Maintenance-Schedule_v1.0.xlsx",
+            "worksheet": "01_Maintenance_Schedule",
+            "records": 6,
+            "errors": 0,
+            "warnings": 0,
+            "passed": true,
+            "issues": []
         }
     }
 }
