@@ -1,14 +1,24 @@
 # Project Orion
 
+---
+
+![Release](https://img.shields.io/badge/Release-v0.7.0-success)
+
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
+
 ## Current Release
 
 | Item | Status |
 |------|--------|
-| **Current Version** | **v1.0** |
-| **Release Name** | **Network Design Package** |
+| **Current Version** | **v0.7.0** |
+| **Release Name** | **Maintenance Management Integration** |
 | **Status** | 🟢 Released |
-| **Sprint** | Sprint 2 Complete |
-| **GitHub Release** | [Network Design Package v1.0](https://github.com/GeoJordan/project-orion/releases/latest) |
+| **Current Sprint** | **Sprint 7.1 Complete** |
+| **Latest GitHub Release** | **v0.7.0** |
 
 ---
 
@@ -22,13 +32,13 @@
 
 ## Project Status
 
-| Item                   | Status                                      |
-| ---------------------- | ------------------------------------------- |
-| **Project Status**     | 🟢 Active                                   |
-| **Current Phase**      | **Phase 3 – Infrastructure Implementation** |
-| **Current Sprint**     | **Sprint 3**                                |
-| **Latest Release**     | **Network Design Package v1.0**             |
-| **Repository Version** | **1.0**                                     |
+| Item | Status |
+|------|--------|
+| **Project Status** | 🟢 Active Development |
+| **Current Phase** | **Engineering Validation Platform** |
+| **Current Sprint** | **Sprint 7.1 Complete** |
+| **Latest Release** | **Maintenance Management Integration** |
+| **Active Validators** | **5** |
 
 ---
 
@@ -49,6 +59,10 @@
 - [Skills Demonstrated](#skills-demonstrated)
 - [Why Project Orion?](#why-project-orion)
 - [License](#license)
+- [Architecture Principles](#architecture-principles)
+- [Validation Framework](#validation-framework)
+- [Engineering Validation Platform](#engineering-validation-platform)
+- [Release History](#-release-history)
 
 ---
 
@@ -128,6 +142,7 @@ Deliverables included:
 - Configuration Management
 
 ---
+
 ## Phase 2 — Network Infrastructure ✅
 
 Completed
@@ -159,12 +174,15 @@ Current Activities
 
 # Technology Stack
 
-| Category           | Technologies                                      |
-| ------------------ | ------------------------------------------------- |
-| Infrastructure     | GL.iNet Flint 2, Dell OptiPlex 7060, Verizon Fios |
-| **Automation**     | Home Assistant                                    |
-| Security           | VLANs, Firewall Policies, HIPAA, NIST CSF         |
-| Project Management | Git, GitHub, VS Code, Markdown, Mermaid           |
+| Category       | Technologies                   |
+| -------------- | ------------------------------ |
+| Languages      | Python                         |
+| Data           | Pandas, OpenPyXL               |
+| Validation     | JSON Reports                   |
+| Development    | VS Code, Git                   |
+| Infrastructure | GL.iNet Flint 2, Dell OptiPlex |
+| Engineering    | Home Assistant                 |
+| Security       | HIPAA, NIST CSF                |
 
 ---
 
@@ -214,20 +232,21 @@ Current Activities
 project-orion/
 
 ├── archive/
-│   └── governance/
-├── configs/
-├── diagrams/
-├── docs/
-├── images/
-│   └── network/
-│       └── high-level-architecture.png
-├── scripts/
-├── templates/
+├── automation/
+│   ├── validators/
+│   ├── reports/
+│   ├── utils/
+│   ├── configs/
+│   └── run_validation.py
 │
-├── README.md
+├── data/
+├── docs/
+├── assets/
+├── templates/
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── SECURITY.md
+├── README.md
 └── LICENSE
 
 ```
@@ -265,18 +284,41 @@ The `docs/` directory contains the controlled engineering documentation for Proj
 
 ---
 
+## Validation Platform Roadmap
+
+### Completed
+
+- ✅ Sprint 3 — CMDB Validator
+- ✅ Sprint 4 — Asset Register Validator
+- ✅ Sprint 5 — IPAM & Firmware Validators
+- ✅ Sprint 6 — Shared BaseValidator Framework
+- ✅ Sprint 7.1 — Maintenance Schedule Validator
+
+### In Progress
+
+- 🚧 Sprint 7.2 — Change Register Validator
+
+### Planned
+
+- ⬜ Risk Register Validator
+- ⬜ Test Register Validator
+- ⬜ Engineering Dashboard
+- ⬜ Power BI Reporting
+
+---
+
 ## Current Milestone
 
-Sprint 3 – Infrastructure Implementation
+### Sprint 7.2 — Change Register Validator
 
 Current Objectives
 
-- Configure the GL.iNet Flint 2 router
-- Deploy Home Assistant
-- Configure core network services
-- Validate network connectivity
-- Capture implementation evidence
-- Verify deployment against the Sprint 2 Network Design Package
+- Develop the Change Register Validator
+- Validate Change Request IDs
+- Validate Change Types and Statuses
+- Verify linked CI and Asset references
+- Implement CAB approval validation
+- Generate standardized JSON validation reports
 
 ---
 
@@ -292,6 +334,12 @@ Current Objectives
 - Project Management
 - Git & GitHub Workflow
 - Technical Design Reviews
+- Python Automation
+- Validation Framework Design
+- Data Validation
+- JSON Reporting
+- Configuration Management Database (CMDB)
+- Engineering Data Governance
 
 ---
 
@@ -320,7 +368,25 @@ The reusable `BaseValidator` provides common validation services for all enginee
 | Allowed Value Validation | Enforce controlled vocabularies |
 | Cross-Workbook Reference Validation | Verify relationships between engineering workbooks |
 
-This architecture minimizes duplicated code while ensuring consistent validation behavior across the CMDB, Asset Register, IP Address Register, and Firmware Inventory.
+This architecture minimizes duplicated code while ensuring consistent validation behavior across the CMDB, Asset Register, IPAM, Firmware Tracker, and Maintenance Schedule workbooks.
+
+---
+
+## Engineering Validation Platform
+
+Project Orion currently validates five interconnected engineering workbooks through a shared validation framework.
+
+### Active Validators
+
+| Validator | Purpose |
+|-----------|---------|
+| CMDB | Configuration Item Management |
+| Asset Register | Enterprise Asset Tracking |
+| IPAM | IP Address Management |
+| Firmware Tracker | Firmware Compliance |
+| Maintenance Schedule | Preventive Maintenance Management |
+
+Each validator produces standardized JSON reports while sharing reusable validation components from the BaseValidator framework.
 
 ---
 
@@ -329,6 +395,16 @@ This architecture minimizes duplicated code while ensuring consistent validation
 This project is licensed under the MIT License.
 
 See the [LICENSE](LICENSE) file for complete details.
+
+---
+
+## 📦 Release History
+
+| Version | Date | Highlights |
+|---------|------|------------|
+| **v0.7.0** | August 2026 | Added Maintenance Schedule Validator, cross-workbook CI & Asset validation, expanded platform to five integrated validators |
+| **v0.6.0** | July 2026 | Introduced the shared BaseValidator framework and reusable validation utilities |
+| **v0.5.0** | July 2026 | Added Firmware Tracker Validator and engineering validation reports |
 
 ---
 
