@@ -18,6 +18,7 @@ from openpyxl.styles import (
     )
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import Table, TableStyleInfo
+from openpyxl.worksheet.datavalidation import DataValidation
 
 
 class ChangeRegisterGenerator:
@@ -77,10 +78,11 @@ class ChangeRegisterGenerator:
         self.create_change_register_sheet()
         self.create_change_history_sheet()
         self.create_cab_sheet()
-        self.create_checklist_sheet()
+        self.create_checklist_sheet()   
+        self.create_dashboard_sheet()
         self.create_reference_sheet()
         self.create_revision_sheet()
-        self.create_dashboard_sheet()
+        self.apply_change_register_validations()
 
         output = Path(
             "docs/engineering/change-management/PO-CHANGE-REGISTER_v1.0.xlsx"
@@ -358,6 +360,22 @@ class ChangeRegisterGenerator:
                 "Warning",
                 "Failed"
             ]),
+            "M": ("Change Category", [
+                "Network",
+                "Server",
+                "Security",
+                "Application",
+                "Database",
+                "Cloud",
+                "Endpoint",
+                "Infrastructure",
+            ],
+            ),
+            "O": ("Rollback Plan", [
+                "Yes",
+                "No",
+                ],
+            ),
         }
 
         for column, (title, values) in reference_data.items():
@@ -378,6 +396,64 @@ class ChangeRegisterGenerator:
 
         sheet.freeze_panes = "A2"
         sheet.sheet_view.showGridLines = False
+
+    def apply_change_register_validations(self):
+        """Apply controlled dropdown lists to the Change Register."""
+
+        sheet = self.workbook["01_Change_Register"]
+
+        validation_rules = {
+            # Change Category
+            "C": "'05_Reference_Data'!$M$2:$M$9",
+
+            # Change Type
+            "D": "'05_Reference_Data'!$A$2:$A$4",
+
+            # Status
+            "E": "'05_Reference_Data'!$C$2:$C$6",
+
+            # Risk Level
+            "F": "'05_Reference_Data'!$G$2:$G$5",
+
+            # Priority
+            "G": "'05_Reference_Data'!$E$2:$E$5",
+
+            # CAB Approval
+            "L": "'05_Reference_Data'!$I$2:$I$4",
+
+            # Rollback Plan
+            "Q": "'05_Reference_Data'!$O$2:$O$3",
+
+            # Validation Status
+            "R": "'05_Reference_Data'!$K$2:$K$5",
+        }
+
+        first_data_row = 4
+        last_data_row = 503
+
+        for column, reference_range in validation_rules.items():
+            dropdown = DataValidation(
+                type="list",
+                formula1=f"={reference_range}",
+                allow_blank=True,
+            )
+
+            dropdown.error = (
+                "Select a value from the approved dropdown list."
+            )
+            dropdown.errorTitle = "Invalid Selection"
+            dropdown.prompt = (
+                "Choose an approved Project Orion value."
+            )
+            dropdown.promptTitle = "Controlled Value"
+            dropdown.showErrorMessage = True
+            dropdown.showInputMessage = True
+
+            sheet.add_data_validation(dropdown)
+            dropdown.add(
+                f"{column}{first_data_row}:"
+                f"{column}{last_data_row}"
+            )
 
     def create_revision_sheet(self):
         self.workbook.create_sheet("06_Revision_History")
