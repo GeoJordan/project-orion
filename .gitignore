@@ -1,0 +1,4 @@
+# Microsoft Excel temporary/lock files
+~$*.xlsx
+~$*.xlsm
+~$*.xls
