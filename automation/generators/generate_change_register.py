@@ -7,6 +7,7 @@ Version 1.0
 """
 
 from pathlib import Path
+from datetime import datetime
 
 from openpyxl import Workbook
 from openpyxl.styles import (
@@ -83,6 +84,7 @@ class ChangeRegisterGenerator:
         self.create_reference_sheet()
         self.create_revision_sheet()
         self.apply_change_register_validations()
+        self.add_sample_change_records()
 
         output = Path(
             "docs/engineering/change-management/PO-CHANGE-REGISTER_v1.0.xlsx"
@@ -276,8 +278,9 @@ class ChangeRegisterGenerator:
         }
 
         for column_letter in date_columns:
-            sheet[f"{column_letter}4"].number_format = (
-                "yyyy-mm-dd hh:mm"
+            for row in range(4, 504):
+                sheet[f"{column_letter}{row}"].number_format = (
+                    "yyyy-mm-dd hh:mm"
             )
 
         # ---------- Column Widths ----------
@@ -453,6 +456,93 @@ class ChangeRegisterGenerator:
             dropdown.add(
                 f"{column}{first_data_row}:"
                 f"{column}{last_data_row}"
+            )
+
+    def add_sample_change_records(self):
+        """Add controlled sample records for validation testing."""
+
+        sheet = self.workbook["01_Change_Register"]
+
+        sample_records = [
+            [
+                "CHG-000001",
+                "Upgrade Core Firewall Firmware",
+                "Network",
+                "Standard",
+                "Planned",
+                "Medium",
+                "Medium",
+                "CI-NET-001",
+                "AST-NET-001",
+                "Infrastructure Team",
+                "Network Engineer",
+                "Yes",
+                datetime(2026, 9, 21, 20, 0),
+                datetime(2026, 9, 21, 22, 0),
+                None,
+                None,
+                "Yes",
+                "Pending",
+                "Scheduled maintenance window.",
+            ],
+            [
+                "CHG-000002",
+                "Patch Windows Domain Controller",
+                "Server",
+                "Normal",
+                "Approved",
+                "High",
+                "High",
+                "CI-SRV-001",
+                "AST-SRV-001",
+                "Security Team",
+                "Systems Engineer",
+                "Yes",
+                datetime(2026, 9, 22, 19, 0),
+                datetime(2026, 9, 22, 21, 0),
+                None,
+                None,
+                "Yes",
+                "Pending",
+                "Security patch deployment.",
+            ],
+            [
+                "CHG-000003",
+                "Rotate Cloud Service Credentials",
+                "Cloud",
+                "Normal",
+                "Completed",
+                "Medium",
+                "Medium",
+                "CI-CLD-001",
+                "AST-CLD-001",
+                "Cloud Operations",
+                "Cloud Engineer",
+                "Yes",
+                datetime(2026, 9, 15, 18, 0),
+                datetime(2026, 9, 15, 19, 0),
+                datetime(2026, 9, 15, 18, 5),
+                datetime(2026, 9, 15, 18, 48),
+                "Yes",
+                "Passed",
+                "Change completed and validated.",
+            ],
+        ]
+
+        start_row = 4
+
+        for row_number, record in enumerate(
+            sample_records,
+            start=start_row,
+        ):
+            for column_number, value in enumerate(
+                record,
+                start=1,
+            ):
+                sheet.cell(
+                    row=row_number,
+                    column=column_number,
+                    value=value,
             )
 
     def create_revision_sheet(self):
